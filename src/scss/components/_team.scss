@@ -1,0 +1,224 @@
+.team-component {
+  margin-bottom: 25rem;
+
+  .team-intro {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+
+  .title {
+    font-size: 5rem;
+    color: $color-white;
+    font-family: $montserrat;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    margin-top: 2rem;
+  }
+
+  .member-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    border-right: 0.05rem solid $primary-color;
+    border-bottom: 0.05rem solid $primary-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0)
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+      z-index: 0;
+    }
+
+    .member-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .member-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 2s ease;
+      backface-visibility: hidden;
+      position: relative;
+      z-index: -1;
+    }
+
+    .member-description {
+      position: absolute;
+      bottom: 0rem;
+      color: $color-white;
+      transition: background-color 1.5s ease;
+      padding: 2rem 3rem;
+    }
+
+    .member-title {
+      transition: color 1s ease;
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    .member-job {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: $color-white;
+      margin-bottom: 2rem;
+    }
+
+    .member-details {
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 1.5s ease, opacity 1s ease;
+    }
+
+    &:hover {
+      .member-details {
+        max-height: 20rem;
+        opacity: 1;
+      }
+
+      .member-description {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .member-img {
+        transform: scale(1.2);
+        z-index: -1;
+      }
+    }
+
+    .member-details-content {
+      font-size: 1.4rem;
+    }
+
+    .member-read-more {
+      background: black;
+      color: $color-white;
+      display: block;
+      padding: 0.4rem 1rem 0.4rem 1rem;
+      border-radius: 0.3rem;
+      margin-top: 2rem;
+      border: 1px solid $gray;
+      font-size: 1.4rem;
+      backface-visibility: hidden;
+      text-decoration: none;
+      width: fit-content;
+      margin-left: auto;
+      position: relative;
+      z-index: 5;
+      margin-right: 1rem;
+
+      i {
+        position: relative;
+        left: 0.2rem;
+        color: $color-white;
+        transition: left 0.5s ease, color 0.6s ease;
+        backface-visibility: hidden;
+      }
+
+      &:hover {
+        border: 1.5px solid $primary-color;
+        i {
+          left: 0.5rem;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .team-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: $shadow-gray;
+    border-radius: 0.5rem;
+  }
+
+  .members {
+    display: grid;
+    grid-auto-rows: 50rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem 3rem;
+  }
+
+  // @media screen and (max-width: 1280px) {
+  //   .title {
+  //     font-size: 4.4rem;
+  //   }
+
+  //   .blog {
+  //     row-gap: 1.5rem;
+
+  //     .news-card:nth-child(1) {
+  //       grid-area: 1/1/3/5;
+
+  //       .news-title {
+  //         font-size: 2rem;
+  //       }
+
+  //       .news-details-content {
+  //         font-size: 1.6rem;
+  //       }
+
+  //       .news-description {
+  //         width: 95%;
+  //       }
+  //     }
+
+  //     .news-card:nth-child(2) {
+  //       grid-area: 3/1/4/3;
+  //     }
+  //   }
+
+  //   .blog-article {
+  //     grid-area: 3/3/4/5;
+  //   }
+  // }
+
+  // @media screen and (max-width: 810px) {
+  //   .title {
+  //     font-size: 4rem;
+  //     margin-bottom: 5rem;
+  //   }
+
+  //   .blog {
+  //     grid-template-rows: repeat(3, 25rem);
+
+  //     .news-card:nth-child(1) {
+  //       grid-area: 1/1/2/5;
+  //     }
+
+  //     .news-card:nth-child(2) {
+  //       grid-area: 2/1/3/5;
+  //     }
+  //   }
+
+  //   .blog-article {
+  //     grid-area: 3/1/4/5;
+  //   }
+
+  //   .more-articles {
+  //     grid-auto-rows: 25rem;
+  //   }
+  // }
+
+  // @media screen and (max-width: 414px) {
+  //   .title {
+  //     font-size: 3rem;
+  //   }
+  // }
+}

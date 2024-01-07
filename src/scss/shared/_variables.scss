@@ -2,8 +2,23 @@
 $primary-color: #f4ce14;
 $primary-color-hover: #e1c224;
 $color-black: #272829;
-$color-black-transp: rgba(39, 40, 41, 0.901);
 $color-white: #f5f7f8;
+$gray: #424141;
+
+/* Trans */
+$color-black-transp: rgba(39, 40, 41, 0.901);
+$color-primary-transp: #f4cf142b;
+
+/* Shadow */
+$shadow-gray: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+  rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+/* Gradient */
+$gradient-black-light: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0) 0%,
+  rgba(0, 0, 0, 0.4) 100%
+);
 
 /* Breakpoints */
 $xs-small-screen: 320px;

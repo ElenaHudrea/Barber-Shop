@@ -3,6 +3,7 @@
   gap: 12rem;
   margin: 12rem 10rem 20rem 10rem;
   position: relative;
+  align-items: center;
 
   .hero-title {
     width: 20%;
@@ -11,6 +12,10 @@
     font-size: 6rem;
     margin-bottom: 3.6rem;
     font-weight: bold;
+
+    &.about-us-title {
+      width: 100%;
+    }
   }
 
   .hero-text {
@@ -43,6 +48,10 @@
     max-height: 24rem;
     height: 100%;
     z-index: -1;
+  }
+
+  &.left-img {
+    flex-direction: row-reverse;
   }
 
   .buttons-container {

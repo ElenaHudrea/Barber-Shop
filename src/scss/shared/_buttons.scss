@@ -15,8 +15,8 @@
     background-color: $color-black;
     color: $color-white;
 
-    // &:hover {
-    //   background-color: ;
-    // }
+    &:hover {
+      background-color: $color-primary-transp;
+    }
   }
 }

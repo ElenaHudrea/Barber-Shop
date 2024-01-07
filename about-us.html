@@ -6,6 +6,12 @@
     <title>Barber Shop</title>
 
     <link rel="stylesheet" href="src/scss/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="src/js/script.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -18,16 +24,18 @@
             <div class="menu">
               <ul class="list">
                 <li class="list-link">
-                  <a href="#" class="link-menu active">Home</a>
+                  <a href="index.html" class="link-menu">Home</a>
                 </li>
                 <li class="list-link submenu-active">
-                  <a href="#" class="link-menu space">About Us</a>
+                  <a href="about-us.html" class="link-menu space active"
+                    >About Us</a
+                  >
                 </li>
                 <li class="list-link">
-                  <a href="#" class="link-menu">Appointment</a>
+                  <a href="appointment.html" class="link-menu">Appointment</a>
                 </li>
                 <li class="list-link">
-                  <a href="#" class="link-menu">Contact</a>
+                  <a href="contact.html" class="link-menu">Contact</a>
                 </li>
               </ul>
               <a href="#login" rel="modal:open" class="primary-button modal-btn"
@@ -46,10 +54,10 @@
 
       <div class="container header">
         <img src="img/background-triangle.png" class="triangle-bkg" alt="" />
-        <div class="hero-component">
+        <div class="hero-component left-img">
           <div class="hero-description">
-            <h1 class="hero-title">
-              <span class="accent-yellow">Best</span> Barber
+            <h1 class="hero-title about-us-title">
+              Know Us <span class="accent-yellow">Better</span>
             </h1>
             <p class="hero-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua. Ut
@@ -68,60 +76,118 @@
       </div>
     </header>
 
-    <!-- SERVICES -->
+    <!-- Grid Component -->
     <section class="container">
-      <div class="services-component">
-        <div class="services-intro">
-          <h2 class="title">
-            <span class="accent-yellow">Best</span> Services
-          </h2>
+      <div class="team-component">
+        <div class="team-intro">
+          <h2 class="title">Our <span class="accent-yellow">Team</span></h2>
           <p class="subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
-        <div class="service-cards">
-          <!-- service 1 -->
+        <div class="team-section">
+          <div class="members">
+            <div class="member-card">
+              <a href="#" class="card-link"></a>
+              <img src="img/member1.jpg" alt="" class="member-img" />
+              <div class="member-description">
+                <h2 class="member-title">Emily</h2>
+                <div class="member-job">Master Barber & Color Expert</div>
+                <div class="member-details">
+                  <p class="member-details-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    pariatur nemo tempore repellat?&hellip;
+                  </p>
+                  <a href="#" class="member-read-more"
+                    >Read more <i class="fa fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="member-card">
+              <a href="#" class="card-link"></a>
+              <img src="img/member2.jpg" alt="" class="member-img" />
+              <div class="member-description">
+                <h2 class="member-title">John</h2>
+                <div class="member-job">Master Barber & Color Expert</div>
+                <div class="member-details">
+                  <p class="member-details-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    pariatur nemo tempore repellat?&hellip;
+                  </p>
+                  <a href="#" class="member-read-more"
+                    >Read more <i class="fa fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="member-card">
+              <a href="#" class="card-link"></a>
+              <img src="img/member3.jpg" alt="" class="member-img" />
+              <div class="member-description">
+                <h2 class="member-title">Anne</h2>
+                <div class="member-job">Master Barber & Color Expert</div>
+                <div class="member-details">
+                  <p class="member-details-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                    pariatur nemo tempore repellat?&hellip;
+                  </p>
+                  <a href="#" class="member-read-more"
+                    >Read more <i class="fa fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="container">
+      <div class="team-component">
+        <div class="team-intro">
+          <h2 class="title">Our <span class="accent-yellow">Team</span></h2>
+          <p class="subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <div class="team-cards">
+          <!-- member 1 -->
           <div class="card">
             <div class="card-img">
-              <img src="img/icon-1.png" alt="" class="service-img" />
+              <img src="img/icon-1.png" alt="" class="member-img" />
             </div>
-            <h3 class="service-title">Lorem ipsum</h3>
-            <p class="service-description">
+            <h3 class="member-title">Lorem ipsum</h3>
+            <p class="member-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
             </p>
           </div>
 
-          <!-- service 2 -->
+          <!-- member 2 -->
           <div class="card">
             <div class="card-img">
-              <img src="img/icon-2.png" alt="" class="service-img" />
+              <img src="img/icon-2.png" alt="" class="member-img" />
             </div>
-            <h3 class="service-title">Lorem ipsum</h3>
-            <p class="service-description">
+            <h3 class="member-title">Lorem ipsum</h3>
+            <p class="member-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
             </p>
           </div>
 
-          <!-- service 3 -->
+          <!-- member 3 -->
           <div class="card">
             <div class="card-img">
-              <img src="img/icon-3.png" alt="" class="service-img" />
+              <img src="img/icon-3.png" alt="" class="member-img" />
             </div>
-            <h3 class="service-title">Lorem ipsum</h3>
-            <p class="service-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            </p>
-          </div>
-
-          <!-- service 4 -->
-          <div class="card">
-            <div class="card-img">
-              <img src="img/icon-4.png" alt="" class="service-img" />
-            </div>
-            <h3 class="service-title">Lorem ipsum</h3>
-            <p class="service-description">
+            <h3 class="member-title">Lorem ipsum</h3>
+            <p class="member-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
             </p>
           </div>
