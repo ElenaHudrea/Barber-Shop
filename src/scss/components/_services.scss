@@ -1,0 +1,55 @@
+.services-component {
+  margin-bottom: 20rem;
+
+  .services-intro {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+
+  .title {
+    font-size: 5rem;
+    color: $color-white;
+    font-family: $montserrat;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    margin-top: 2rem;
+  }
+
+  .service-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .card {
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    border: 0.2rem solid $primary-color;
+  }
+
+  .card-img {
+    max-width: 7.8rem;
+    max-height: 8rem;
+
+    .service-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .service-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  .service-description {
+    text-align: center;
+  }
+}

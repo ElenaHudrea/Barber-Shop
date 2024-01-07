@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media screen and (max-width: 1536px) {
+  }
+}
+
+body {
+  font-family: $montserrat;
+  font-size: 1.8rem;
+  color: $color-white;
+  background-color: $color-black;
+}
+
+.accent-yellow {
+  color: $primary-color;
+}

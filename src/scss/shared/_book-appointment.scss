@@ -1,0 +1,35 @@
+.book-appointment {
+  position: relative;
+  background-image: url(/img/book-appoinment.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50rem;
+  margin-bottom: 20rem;
+  display: flex;
+  align-items: center;
+
+  .book-appointment-bkg {
+    background-color: $color-black-transp;
+    height: 17rem;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .book-appointment-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .title {
+    font-size: 4.8rem;
+    font-weight: bold;
+    width: 30%;
+    border-right: 0.3rem solid $primary-color;
+  }
+
+  .description {
+    width: 40%;
+  }
+}

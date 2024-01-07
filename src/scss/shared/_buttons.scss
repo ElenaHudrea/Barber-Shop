@@ -1,0 +1,22 @@
+.primary-button {
+  background-color: $primary-color;
+  color: $color-black;
+  text-decoration: none;
+  padding: 1.3rem 3rem;
+  border-radius: 10rem;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+
+  &.transp {
+    border: 0.2rem solid $primary-color;
+    background-color: $color-black;
+    color: $color-white;
+
+    // &:hover {
+    //   background-color: ;
+    // }
+  }
+}

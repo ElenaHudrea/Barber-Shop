@@ -1,0 +1,487 @@
+/* Colors */
+/* Breakpoints */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+h1 {
+  font-size: 2zem;
+  margin: 0;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 0;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 0;
+  font-weight: 100;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 0;
+  font-weight: 100;
+}
+
+h6 {
+  font-size: 0.67em;
+  margin: 0;
+  font-weight: 100;
+}
+
+.navigation-component {
+  padding-top: 6rem;
+}
+.navigation-component .elements-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation-component .logo {
+  width: 20rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.navigation-component .logo img {
+  width: 100%;
+  height: 100%;
+}
+.navigation-component .menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13rem;
+}
+@media screen and (max-width: 1440px) {
+  .navigation-component .menu {
+    gap: 6rem;
+  }
+}
+.navigation-component .list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  gap: 7rem;
+  list-style: none;
+  padding: 0;
+}
+@media screen and (max-width: 1440px) {
+  .navigation-component .list {
+    gap: 4rem;
+  }
+}
+.navigation-component .link-menu {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #f5f7f8;
+}
+.navigation-component .link-menu.active {
+  color: #f4ce14;
+}
+.navigation-component .link-menu:hover {
+  color: #f4ce14;
+}
+.navigation-component .space {
+  display: inline-block;
+  width: 8.8rem;
+}
+.navigation-component .hamburger {
+  display: none;
+  background-color: #f4ce14;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.4rem;
+}
+.navigation-component .hamburger .bar {
+  display: block;
+  width: 2rem;
+  height: 0.3rem;
+  margin: 0.4rem auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #272829;
+}
+
+.footer {
+  background-color: #f4ce14;
+  width: 100%;
+  padding: 6rem 0;
+}
+.footer .logo {
+  width: 20rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.footer .logo img {
+  width: 100%;
+  height: 100%;
+}
+.footer .footer-links {
+  display: flex;
+  gap: 20rem;
+}
+.footer .footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer .title-list {
+  color: #272829;
+  font-weight: bold;
+}
+.footer .item-list {
+  text-decoration: none;
+  color: #272829;
+  width: 13rem;
+}
+.footer .item-list:hover {
+  font-weight: 500;
+}
+
+.primary-button {
+  background-color: #f4ce14;
+  color: #272829;
+  text-decoration: none;
+  padding: 1.3rem 3rem;
+  border-radius: 10rem;
+  font-weight: 500;
+}
+.primary-button:hover {
+  background-color: #e1c224;
+}
+.primary-button.transp {
+  border: 0.2rem solid #f4ce14;
+  background-color: #272829;
+  color: #f5f7f8;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0rem auto;
+}
+.container.header .triangle-bkg {
+  position: absolute;
+  left: -10rem;
+  top: 13rem;
+  max-width: 22rem;
+  width: 100%;
+  max-height: 55rem;
+  height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 60rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 50rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .container {
+    max-width: 30rem;
+  }
+}
+
+.form-component {
+  margin: 0 auto 20rem;
+  width: 90%;
+  background-color: #f4ce14;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.form-component .form-text-box {
+  padding-left: 5rem;
+  margin: auto 0;
+}
+.form-component .title {
+  font-size: 2.4rem;
+  color: #272829;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+.form-component .cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.form-component .personal-info {
+  display: flex;
+  gap: 5rem;
+}
+.form-component .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.form-component .form-item label {
+  font-size: 1.6rem;
+  color: #272829;
+}
+.form-component .form-item input,
+.form-component .form-item textarea {
+  border: none;
+  border-radius: 0.6rem;
+  background-color: #272829;
+  padding: 1.5rem;
+  color: #f5f7f8;
+}
+.form-component .form-item input::-moz-placeholder, .form-component .form-item textarea::-moz-placeholder {
+  color: #f5f7f8;
+}
+.form-component .form-item input::placeholder,
+.form-component .form-item textarea::placeholder {
+  color: #f5f7f8;
+}
+.form-component .btn {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-radius: 0.6rem;
+  background-color: #272829;
+  padding: 1.5rem;
+  color: #f5f7f8;
+}
+.form-component .form-img-box {
+  max-width: 65rem;
+  max-height: 52rem;
+}
+.form-component .form-img-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.book-appointment {
+  position: relative;
+  background-image: url(/img/book-appoinment.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50rem;
+  margin-bottom: 20rem;
+  display: flex;
+  align-items: center;
+}
+.book-appointment .book-appointment-bkg {
+  background-color: rgba(39, 40, 41, 0.901);
+  height: 17rem;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+.book-appointment .book-appointment-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.book-appointment .title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  width: 30%;
+  border-right: 0.3rem solid #f4ce14;
+}
+.book-appointment .description {
+  width: 40%;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: #f5f7f8;
+  background-color: #272829;
+}
+
+.accent-yellow {
+  color: #f4ce14;
+}
+
+.hero-component {
+  display: flex;
+  gap: 12rem;
+  margin: 12rem 10rem 20rem 10rem;
+  position: relative;
+}
+.hero-component .hero-title {
+  width: 20%;
+  color: #f5f7f8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 6rem;
+  margin-bottom: 3.6rem;
+  font-weight: bold;
+}
+.hero-component .hero-text {
+  line-height: 4rem;
+  margin-bottom: 3.6rem;
+}
+.hero-component .hero-img {
+  border: 2px solid #f4ce14;
+  border-radius: 3rem;
+  max-width: 40rem;
+  width: 100%;
+  max-height: 40rem;
+  height: 100%;
+}
+.hero-component .hero-img img {
+  border-radius: 3rem;
+  width: 100%;
+  height: 100%;
+}
+.hero-component .img-shadow {
+  background-color: #f4ce14;
+  position: absolute;
+  right: -16rem;
+  top: 23rem;
+  max-width: 27rem;
+  width: 100%;
+  max-height: 24rem;
+  height: 100%;
+  z-index: -1;
+}
+.hero-component .buttons-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.services-component {
+  margin-bottom: 20rem;
+}
+.services-component .services-intro {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.services-component .title {
+  font-size: 5rem;
+  color: #f5f7f8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.services-component .subtitle {
+  margin-top: 2rem;
+}
+.services-component .service-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+.services-component .card {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  border: 0.2rem solid #f4ce14;
+}
+.services-component .card-img {
+  max-width: 7.8rem;
+  max-height: 8rem;
+}
+.services-component .card-img .service-img {
+  width: 100%;
+  height: 100%;
+}
+.services-component .service-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.services-component .service-description {
+  text-align: center;
+}
+
+.faq-component {
+  margin-bottom: 20rem;
+}
+.faq-component .faq-title {
+  font-size: 4.8rem;
+  text-align: center;
+  margin-bottom: 7rem;
+  line-height: 6rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 640px) {
+  .faq-component .faq-title {
+    font-size: 3rem;
+  }
+}
+.faq-component .faq {
+  width: 70%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .faq-component .faq {
+    width: 100%;
+  }
+}
+.faq-component .faq .faq-item .question {
+  position: relative;
+  font-weight: 500;
+  padding: 1rem 6rem 2rem 1rem;
+  border-bottom: 1px solid #f4ce14;
+  margin-top: 1rem;
+}
+.faq-component .faq .faq-item .question:hover {
+  cursor: pointer;
+  color: #f4ce14;
+}
+.faq-component .faq .faq-item .question.active {
+  color: #f4ce14;
+  border-bottom: 1px solid #f4ce14;
+}
+.faq-component .faq .faq-item .question.active::before {
+  content: "-";
+  color: #f4ce14;
+}
+.faq-component .faq .faq-item .question::before {
+  position: absolute;
+  content: "+";
+  right: 1rem;
+  margin-top: -0.4em;
+  font-size: 3rem;
+  color: #f4ce14;
+  padding: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+.faq-component .faq .faq-item .faq-content {
+  margin-top: 1rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease 0.15s;
+}
+.faq-component .faq .faq-item .faq-content .faq-text {
+  padding: 1rem 0 2rem 5rem;
+}
+@media screen and (max-width: 640px) {
+  .faq-component .faq .faq-item .faq-content .faq-text {
+    font-size: 1.6rem;
+  }
+}
+.faq-component .faq .faq-item .faq-content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  transition: all 0.2s ease 0.15s;
+  border-bottom: 1px solid #f4ce14;
+}/*# sourceMappingURL=main.css.map */

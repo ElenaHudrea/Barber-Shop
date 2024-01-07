@@ -1,0 +1,85 @@
+.faq-component {
+  margin-bottom: 20rem;
+
+  .faq-title {
+    font-size: 4.8rem;
+    text-align: center;
+    margin-bottom: 7rem;
+    line-height: 6rem;
+    font-weight: bold;
+
+    @media screen and (max-width: 640px) {
+      font-size: 3rem;
+    }
+  }
+
+  .faq {
+    width: 70%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+
+    .faq-item {
+      .question {
+        position: relative;
+        font-weight: 500;
+        padding: 1rem 6rem 2rem 1rem;
+        border-bottom: 1px solid $primary-color;
+        margin-top: 1rem;
+
+        &:hover {
+          cursor: pointer;
+          color: $primary-color;
+        }
+
+        &.active {
+          color: $primary-color;
+          border-bottom: 1px solid $primary-color;
+
+          &::before {
+            content: "\002D";
+            color: $primary-color;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          content: "\002B";
+          right: 1rem;
+          margin-top: -0.4em;
+          font-size: 3rem;
+          color: $primary-color;
+          padding: 0.4rem;
+          width: 2rem;
+          height: 2rem;
+          text-align: center;
+        }
+      }
+
+      .faq-content {
+        margin-top: 1rem;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease 0.15s;
+
+        .faq-text {
+          padding: 1rem 0 2rem 5rem;
+          @media screen and (max-width: 640px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        &.active {
+          opacity: 1;
+          padding: 1rem;
+          max-height: 100%;
+          transition: all 0.2s ease 0.15s;
+          border-bottom: 1px solid $primary-color;
+        }
+      }
+    }
+  }
+}
