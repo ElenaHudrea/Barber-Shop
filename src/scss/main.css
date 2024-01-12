@@ -42,7 +42,7 @@ h6 {
 }
 
 .navigation-component {
-  padding-top: 6rem;
+  padding: 6rem 2rem 0 2rem;
 }
 .navigation-component .elements-nav {
   display: flex;
@@ -55,6 +55,11 @@ h6 {
   height: -moz-fit-content;
   height: fit-content;
 }
+@media screen and (max-width: 1024px) {
+  .navigation-component .logo {
+    width: 15rem;
+  }
+}
 .navigation-component .logo img {
   width: 100%;
   height: 100%;
@@ -65,9 +70,14 @@ h6 {
   align-items: center;
   gap: 13rem;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
   .navigation-component .menu {
     gap: 6rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navigation-component .menu {
+    gap: 4rem;
   }
 }
 .navigation-component .list {
@@ -79,9 +89,14 @@ h6 {
   list-style: none;
   padding: 0;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
   .navigation-component .list {
     gap: 4rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navigation-component .list {
+    gap: 2rem;
   }
 }
 .navigation-component .link-menu {
@@ -112,6 +127,64 @@ h6 {
   margin: 0.4rem auto;
   transition: all 0.3s ease-in-out;
   background-color: #272829;
+}
+@media screen and (max-width: 1024px) {
+  .navigation-component .menu {
+    position: fixed;
+    left: -100%;
+    top: 4rem;
+    padding-bottom: 5rem;
+    flex-direction: column;
+    background-color: rgba(39, 40, 41, 0.901);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    gap: 4rem;
+    z-index: 3;
+  }
+  .navigation-component .menu.active {
+    left: 0;
+  }
+  .navigation-component .primary-button {
+    width: 10%;
+    margin: 0 auto;
+  }
+  .navigation-component .list {
+    padding-top: 8rem;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: center;
+  }
+  .navigation-component .list-link {
+    position: relative;
+    width: 70%;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  .navigation-component .list-link.active .link-menu {
+    color: #272829;
+  }
+  .navigation-component .link-menu {
+    padding: 0 0 0rem 2rem;
+    color: #f5f7f8;
+  }
+  .navigation-component .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 9;
+  }
+  .navigation-component .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navigation-component .hamburger.active .bar:nth-child(1) {
+    transform: translateY(0.7rem) rotate(45deg);
+  }
+  .navigation-component .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-0.7rem) rotate(-45deg);
+  }
 }
 
 .footer {
@@ -185,18 +258,34 @@ h6 {
   height: 100%;
 }
 @media screen and (max-width: 1024px) {
+  .container.header .triangle-bkg {
+    max-width: 16rem;
+    max-height: 30rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container.header .triangle-bkg {
+    display: none;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .container {
+    max-width: 110rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 100rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 80rem;
+  }
+}
+@media screen and (max-width: 768px) {
   .container {
     max-width: 60rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 50rem;
-  }
-}
-@media screen and (max-width: 414px) {
-  .container {
-    max-width: 30rem;
   }
 }
 
@@ -208,8 +297,14 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .form-component {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+}
 .form-component .form-text-box {
-  padding-left: 5rem;
+  padding: 3rem 5rem;
   margin: auto 0;
 }
 .form-component .title {
@@ -217,6 +312,11 @@ h6 {
   color: #272829;
   font-weight: 600;
   margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .form-component .title {
+    font-size: 1.8rem;
+  }
 }
 .form-component .cta-form {
   display: flex;
@@ -227,6 +327,12 @@ h6 {
   display: flex;
   gap: 5rem;
 }
+@media screen and (max-width: 768px) {
+  .form-component .personal-info {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
 .form-component .form-item {
   display: flex;
   flex-direction: column;
@@ -236,6 +342,11 @@ h6 {
 .form-component .form-item label {
   font-size: 1.6rem;
   color: #272829;
+}
+@media screen and (max-width: 768px) {
+  .form-component .form-item label {
+    font-size: 1.4rem;
+  }
 }
 .form-component .form-item input,
 .form-component .form-item textarea {
@@ -264,10 +375,25 @@ h6 {
   max-width: 65rem;
   max-height: 52rem;
 }
+@media screen and (max-width: 1600px) {
+  .form-component .form-img-box {
+    max-width: 38rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-component .form-img-box {
+    max-width: 100%;
+  }
+}
 .form-component .form-img-box img {
   width: 100%;
   height: 100%;
   border-radius: 0 2rem 2rem 0;
+}
+@media screen and (max-width: 768px) {
+  .form-component .form-img-box img {
+    border-radius: 0 0 2rem 2rem;
+  }
 }
 
 .book-appointment {
@@ -326,6 +452,30 @@ body {
   margin: 12rem 10rem 20rem 10rem;
   position: relative;
   align-items: center;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .hero-component {
+    margin: 12rem 0 20rem 0;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-component {
+    margin: 8rem 0 15rem 0;
+    flex-direction: column;
+    gap: 8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-component {
+    margin: 8rem 0 10rem 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-component .hero-description {
+    text-align: center;
+  }
 }
 .hero-component .hero-title {
   width: 20%;
@@ -338,12 +488,31 @@ body {
 .hero-component .hero-title.about-us-title {
   width: 100%;
 }
+@media screen and (max-width: 991px) {
+  .hero-component .hero-title {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-component .hero-title {
+    font-size: 4rem;
+  }
+}
 .hero-component .hero-text {
   line-height: 4rem;
   margin-bottom: 3.6rem;
 }
+@media screen and (max-width: 768px) {
+  .hero-component .hero-text {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-component .primary-button {
+    font-size: 1.4rem;
+  }
+}
 .hero-component .hero-img {
-  border: 2px solid #f4ce14;
   border-radius: 3rem;
   max-width: 40rem;
   width: 100%;
@@ -352,6 +521,7 @@ body {
 }
 .hero-component .hero-img img {
   border-radius: 3rem;
+  border: 2px solid #f4ce14;
   width: 100%;
   height: 100%;
 }
@@ -366,6 +536,11 @@ body {
   height: 100%;
   z-index: -1;
 }
+@media screen and (max-width: 991px) {
+  .hero-component .img-shadow {
+    display: none;
+  }
+}
 .hero-component.left-img {
   flex-direction: row-reverse;
 }
@@ -376,10 +551,21 @@ body {
 
 .services-component {
   margin-bottom: 20rem;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 768px) {
+  .services-component {
+    margin-bottom: 10rem;
+  }
 }
 .services-component .services-intro {
   text-align: center;
   margin-bottom: 8rem;
+}
+@media screen and (max-width: 992px) {
+  .services-component .services-intro {
+    margin-bottom: 4rem;
+  }
 }
 .services-component .title {
   font-size: 5rem;
@@ -387,16 +573,33 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  .services-component .title {
+    font-size: 3rem;
+  }
+}
 .services-component .subtitle {
   margin-top: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .services-component .subtitle {
+    font-size: 1.6rem;
+  }
+}
 .services-component .service-cards {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 4rem;
 }
+@media screen and (max-width: 1600px) {
+  .services-component .service-cards {
+    gap: 2rem;
+  }
+}
 .services-component .card {
-  padding: 4rem 3rem;
+  flex: 1 0 20rem;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -404,6 +607,11 @@ body {
   align-items: center;
   border-radius: 2rem;
   border: 0.2rem solid #f4ce14;
+}
+@media screen and (max-width: 1600px) {
+  .services-component .card {
+    flex: 1 0 18rem;
+  }
 }
 .services-component .card-img {
   max-width: 7.8rem;
@@ -414,15 +622,22 @@ body {
   height: 100%;
 }
 .services-component .service-title {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .services-component .service-description {
   text-align: center;
+  font-size: 1.6rem;
 }
 
 .faq-component {
   margin-bottom: 20rem;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 768px) {
+  .faq-component {
+    margin-bottom: 10rem;
+  }
 }
 .faq-component .faq-title {
   font-size: 4.8rem;
@@ -431,9 +646,10 @@ body {
   line-height: 6rem;
   font-weight: bold;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .faq-component .faq-title {
     font-size: 3rem;
+    margin-bottom: 4rem;
   }
 }
 .faq-component .faq {
@@ -486,7 +702,7 @@ body {
 .faq-component .faq .faq-item .faq-content .faq-text {
   padding: 1rem 0 2rem 5rem;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .faq-component .faq .faq-item .faq-content .faq-text {
     font-size: 1.6rem;
   }
