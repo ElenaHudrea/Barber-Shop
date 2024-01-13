@@ -1,0 +1,98 @@
+.price-container {
+  position: relative;
+  background-image: url("../img/barber-shop-sign.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70rem;
+  margin-bottom: 20rem;
+
+  @media screen and (max-width: $md-screen) {
+    margin-bottom: 10rem;
+  }
+
+  .price-content {
+    background-color: $color-black-transp;
+    border-radius: 3rem;
+    padding: 4rem 5rem;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    @media screen and (max-width: $lg-screen-max) {
+      width: fit-content;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      margin: 0 2rem;
+      padding: 4rem 0;
+    }
+  }
+
+  .title {
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-align: center;
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 3rem;
+    }
+  }
+
+  .description {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: $md-screen) {
+      margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .price-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: $md-screen) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .price-item {
+    display: flex;
+    min-width: 32rem;
+    justify-content: space-between;
+    gap: 9rem;
+    border-bottom: 0.1rem solid $primary-color;
+    padding-bottom: 1rem;
+  }
+
+  .service {
+    font-size: 2rem;
+    font-weight: 600;
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .price {
+    font-size: 2rem;
+    font-weight: 600;
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 1.6rem;
+    }
+  }
+}

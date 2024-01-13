@@ -330,7 +330,7 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .form-component {
     flex-direction: column;
     margin-bottom: 10rem;
@@ -413,7 +413,7 @@ h6 {
     max-width: 38rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .form-component .form-img-box {
     max-width: 100%;
   }
@@ -423,7 +423,7 @@ h6 {
   height: 100%;
   border-radius: 0 2rem 2rem 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .form-component .form-img-box img {
     border-radius: 0 0 2rem 2rem;
   }
@@ -439,7 +439,7 @@ h6 {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .book-appointment {
     margin-bottom: 10rem;
   }
@@ -545,7 +545,7 @@ body {
   margin-bottom: 20rem;
   padding: 0 2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .testimonials-component {
     margin-bottom: 10rem;
   }
@@ -564,6 +564,12 @@ body {
 .testimonials-component .swiper-wrapper {
   padding-bottom: 20rem;
   padding-top: 18rem;
+}
+@media screen and (max-width: 992px) {
+  .testimonials-component .swiper-wrapper {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
 }
 .testimonials-component .swiper-wrapper .swiper-slide {
   display: flex;
@@ -721,9 +727,10 @@ body {
     gap: 8rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .hero-component {
     margin: 8rem 0 10rem 0;
+    gap: 5rem;
   }
 }
 @media screen and (max-width: 991px) {
@@ -747,6 +754,11 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 992px) {
+  .hero-component .hero-title {
+    margin-bottom: 2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero-component .hero-title {
     font-size: 4rem;
@@ -755,6 +767,11 @@ body {
 .hero-component .hero-text {
   line-height: 4rem;
   margin-bottom: 3.6rem;
+}
+@media screen and (max-width: 992px) {
+  .hero-component .hero-text {
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .hero-component .hero-text {
@@ -818,7 +835,7 @@ body {
   margin-bottom: 20rem;
   padding: 0 2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .services-component {
     margin-bottom: 10rem;
   }
@@ -899,7 +916,7 @@ body {
   margin-bottom: 20rem;
   padding: 0 2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .faq-component {
     margin-bottom: 10rem;
   }
@@ -911,10 +928,14 @@ body {
   line-height: 6rem;
   font-weight: bold;
 }
+@media screen and (max-width: 992px) {
+  .faq-component .faq-title {
+    margin-bottom: 4rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .faq-component .faq-title {
     font-size: 3rem;
-    margin-bottom: 4rem;
   }
 }
 .faq-component .faq {
@@ -984,7 +1005,7 @@ body {
   margin-bottom: 20rem;
   padding: 0 2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .team-component {
     margin-bottom: 10rem;
   }
@@ -993,7 +1014,7 @@ body {
   text-align: center;
   margin-bottom: 8rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .team-component .team-intro {
     margin-bottom: 4rem;
   }
@@ -1152,4 +1173,216 @@ body {
 }
 .team-component .show-section {
   display: none;
+}
+
+.working-hours-container {
+  margin-bottom: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+@media screen and (max-width: 992px) {
+  .working-hours-container {
+    flex-direction: column-reverse;
+    gap: 5rem;
+    margin-bottom: 10rem;
+  }
+}
+.working-hours-container .working-hours-img {
+  max-width: 50rem;
+  width: 100%;
+  max-height: 55rem;
+  height: 100%;
+  border-radius: 3rem;
+}
+.working-hours-container .working-hours-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+}
+.working-hours-container .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.working-hours-container .title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .working-hours-container .title {
+    font-size: 3rem;
+  }
+}
+.working-hours-container .description {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 992px) {
+  .working-hours-container .description {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .working-hours-container .description {
+    font-size: 1.6rem;
+  }
+}
+.working-hours-container .program-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 992px) {
+  .working-hours-container .program-container {
+    margin-bottom: 2rem;
+  }
+}
+.working-hours-container .program {
+  display: flex;
+  min-width: 32rem;
+  justify-content: space-between;
+  gap: 9rem;
+  border-bottom: 0.1rem solid #f4ce14;
+  padding-bottom: 1rem;
+}
+.working-hours-container .day {
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .working-hours-container .day {
+    font-size: 1.6rem;
+  }
+}
+.working-hours-container .hours {
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .working-hours-container .hours {
+    font-size: 1.6rem;
+  }
+}
+.working-hours-container .buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .working-hours-container .buttons-container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 991px) {
+  .working-hours-container .buttons-container {
+    justify-content: center;
+  }
+}
+
+.price-container {
+  position: relative;
+  background-image: url("../img/barber-shop-sign.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70rem;
+  margin-bottom: 20rem;
+}
+@media screen and (max-width: 992px) {
+  .price-container {
+    margin-bottom: 10rem;
+  }
+}
+.price-container .price-content {
+  background-color: rgba(39, 40, 41, 0.901);
+  border-radius: 3rem;
+  padding: 4rem 5rem;
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: 0 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .price-container .price-content {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 768px) {
+  .price-container .price-content {
+    margin: 0 2rem;
+    padding: 4rem 0;
+  }
+}
+.price-container .title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .price-container .title {
+    font-size: 3rem;
+  }
+}
+.price-container .description {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 992px) {
+  .price-container .description {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .price-container .description {
+    font-size: 1.6rem;
+  }
+}
+.price-container .price-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 992px) {
+  .price-container .price-list-container {
+    margin-bottom: 2rem;
+  }
+}
+.price-container .price-item {
+  display: flex;
+  min-width: 32rem;
+  justify-content: space-between;
+  gap: 9rem;
+  border-bottom: 0.1rem solid #f4ce14;
+  padding-bottom: 1rem;
+}
+.price-container .service {
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .price-container .service {
+    font-size: 1.6rem;
+  }
+}
+.price-container .price {
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .price-container .price {
+    font-size: 1.6rem;
+  }
 }/*# sourceMappingURL=main.css.map */

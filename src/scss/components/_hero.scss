@@ -17,8 +17,9 @@
     gap: 8rem;
   }
 
-  @media screen and (max-width: $sm-screen) {
+  @media screen and (max-width: $md-screen) {
     margin: 8rem 0 10rem 0;
+    gap: 5rem;
   }
 
   .hero-description {
@@ -43,6 +44,10 @@
       width: 100%;
     }
 
+    @media screen and (max-width: $md-screen) {
+      margin-bottom: 2rem;
+    }
+
     @media screen and (max-width: $sm-screen) {
       font-size: 4rem;
     }
@@ -51,6 +56,10 @@
   .hero-text {
     line-height: 4rem;
     margin-bottom: 3.6rem;
+
+    @media screen and (max-width: $md-screen) {
+      margin-bottom: 2rem;
+    }
 
     @media screen and (max-width: $sm-screen) {
       font-size: 1.6rem;

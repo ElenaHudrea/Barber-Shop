@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: $sm-screen) {
+  @media screen and (max-width: $md-screen) {
     flex-direction: column;
     margin-bottom: 10rem;
   }
@@ -89,7 +89,7 @@
       max-width: 38rem;
     }
 
-    @media screen and (max-width: $sm-screen) {
+    @media screen and (max-width: $md-screen) {
       max-width: 100%;
     }
 
@@ -98,7 +98,7 @@
       height: 100%;
       border-radius: 0 2rem 2rem 0;
 
-      @media screen and (max-width: $sm-screen) {
+      @media screen and (max-width: $md-screen) {
         border-radius: 0 0 2rem 2rem;
       }
     }
