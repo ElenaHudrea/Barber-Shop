@@ -6,9 +6,9 @@
   align-items: center;
   padding: 0 2rem;
 
-  @media screen and (max-width: $lg-screen-max) {
+  @media screen and (max-width: $max-width) {
     margin: 12rem 0 20rem 0;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   @media screen and (max-width: $sm-screen-max) {
@@ -96,10 +96,19 @@
 
   &.left-img {
     flex-direction: row-reverse;
+
+    @media screen and (max-width: $sm-screen-max) {
+      flex-direction: column;
+    }
   }
 
   .buttons-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+
+    @media screen and (max-width: $sm-screen-max) {
+      justify-content: center;
+    }
   }
 }

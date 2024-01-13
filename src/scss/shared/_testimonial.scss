@@ -1,0 +1,178 @@
+.testimonials-component {
+  margin-bottom: 20rem;
+  padding: 0 2rem;
+
+  @media screen and (max-width: $sm-screen) {
+    margin-bottom: 10rem;
+  }
+
+  .testimonials-title {
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 6rem;
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 3rem;
+    }
+  }
+
+  .swiper-wrapper {
+    padding-bottom: 20rem;
+    padding-top: 18rem;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        text-decoration: none !important;
+      }
+
+      .card {
+        background-color: transparent;
+        width: 65%;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-top: 4rem;
+        transition: transform 400ms;
+        opacity: 0.3;
+        box-shadow: none;
+
+        @media screen and (max-width: 1280px) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: 640px) {
+          width: 60%;
+          box-shadow: $shadow-gray;
+        }
+      }
+
+      .img-card {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 15rem;
+        border: 0.1rem solid $primary-color;
+        box-shadow: 0 0 5rem $color-primary-transp;
+
+        @media screen and (max-width: 640px) {
+          width: 7rem;
+          height: 7rem;
+        }
+      }
+
+      .header-card {
+        margin-top: 3rem;
+        text-align: center;
+
+        .name {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+          text-decoration: none;
+          color: $color-white;
+          font-weight: 500;
+
+          @media screen and (max-width: 640px) {
+            font-size: 1.8rem;
+          }
+        }
+
+        .fa-star {
+          font-size: 1.2rem;
+          color: $gray;
+
+          &.checked {
+            color: $primary-color;
+          }
+        }
+      }
+
+      .content-container {
+        padding: 1.5rem 4.5rem 3rem 4.5rem;
+        overflow: hidden;
+
+        @media screen and (max-width: 414px) {
+          padding: 1.5rem 3rem 3rem 3rem;
+        }
+
+        .content {
+          font-size: 1.2rem;
+          text-align: center;
+          text-decoration: none;
+          color: $color-white;
+        }
+
+        .social {
+          text-align: center;
+          padding: 3rem 0 2rem 0;
+
+          .logo-social {
+            display: inline-block;
+            text-decoration: none;
+            width: 2rem;
+            height: 2rem;
+
+            svg {
+              color: $primary-color;
+
+              &:hover {
+                cursor: pointer;
+                color: $primary-color-hover;
+              }
+            }
+          }
+        }
+      }
+
+      &.swiper-slide-active {
+        z-index: 1;
+
+        .card {
+          background-color: transparent;
+          border: 0.2rem solid $primary-color;
+          box-shadow: $color-primary-transp;
+          opacity: 1;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+
+  .swiper-button-disabled {
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+
+    .swiper-button-prev {
+      color: $primary-color;
+
+      &:hover {
+        color: $primary-color-hover;
+      }
+    }
+
+    .swiper-button-next {
+      color: $primary-color;
+
+      &:hover {
+        color: $primary-color-hover;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background-color: $color-white;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $primary-color;
+    }
+  }
+}

@@ -189,8 +189,7 @@ h6 {
 
 .footer {
   background-color: #f4ce14;
-  width: 100%;
-  padding: 6rem 0;
+  padding: 6rem 2rem;
 }
 .footer .logo {
   width: 20rem;
@@ -204,6 +203,30 @@ h6 {
 .footer .footer-links {
   display: flex;
   gap: 20rem;
+  flex-wrap: wrap;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 1600px) {
+  .footer .footer-links {
+    gap: 15rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .footer .footer-links {
+    gap: 10rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .footer .footer-links {
+    gap: 5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .footer .footer-links {
+    flex-direction: column;
+    gap: 6rem;
+    padding-left: 3rem;
+  }
 }
 .footer .footer-list {
   display: flex;
@@ -214,10 +237,19 @@ h6 {
   color: #272829;
   font-weight: bold;
 }
+@media screen and (max-width: 1024px) {
+  .footer .title-list {
+    font-size: 1.6rem;
+  }
+}
 .footer .item-list {
   text-decoration: none;
   color: #272829;
-  width: 13rem;
+}
+@media screen and (max-width: 1024px) {
+  .footer .item-list {
+    font-size: 1.6rem;
+  }
 }
 .footer .item-list:hover {
   font-weight: 500;
@@ -230,6 +262,7 @@ h6 {
   padding: 1.3rem 3rem;
   border-radius: 10rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 .primary-button:hover {
   background-color: #e1c224;
@@ -398,7 +431,7 @@ h6 {
 
 .book-appointment {
   position: relative;
-  background-image: url(/img/book-appoinment.jpg);
+  background-image: url("../img/book-appoinment.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 50rem;
@@ -406,26 +439,88 @@ h6 {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .book-appointment {
+    margin-bottom: 10rem;
+  }
+}
 .book-appointment .book-appointment-bkg {
   background-color: rgba(39, 40, 41, 0.901);
   height: 17rem;
   width: 100%;
   display: flex;
   gap: 2rem;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .book-appointment .book-appointment-bkg {
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .book-appointment .book-appointment-bkg {
+    height: 30rem;
+  }
 }
 .book-appointment .book-appointment-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
+  padding: 0 10rem;
+}
+@media screen and (max-width: 1024px) {
+  .book-appointment .book-appointment-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .book-appointment .book-appointment-content {
+    padding: 0;
+  }
+}
+.book-appointment .content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .book-appointment .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 .book-appointment .title {
   font-size: 4.8rem;
   font-weight: bold;
-  width: 30%;
+  padding-right: 2rem;
   border-right: 0.3rem solid #f4ce14;
 }
-.book-appointment .description {
-  width: 40%;
+@media screen and (max-width: 1400px) {
+  .book-appointment .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .book-appointment .title {
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    border-bottom: 0.3rem solid #f4ce14;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .book-appointment .description {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .book-appointment .primary-button {
+    font-size: 1.4rem;
+  }
 }
 
 * {
@@ -446,6 +541,165 @@ body {
   color: #f4ce14;
 }
 
+.testimonials-component {
+  margin-bottom: 20rem;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 768px) {
+  .testimonials-component {
+    margin-bottom: 10rem;
+  }
+}
+.testimonials-component .testimonials-title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .testimonials-component .testimonials-title {
+    font-size: 3rem;
+  }
+}
+.testimonials-component .swiper-wrapper {
+  padding-bottom: 20rem;
+  padding-top: 18rem;
+}
+.testimonials-component .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials-component .swiper-wrapper .swiper-slide a {
+  text-decoration: none !important;
+}
+.testimonials-component .swiper-wrapper .swiper-slide .card {
+  background-color: transparent;
+  width: 65%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 4rem;
+  transition: transform 400ms;
+  opacity: 0.3;
+  box-shadow: none;
+}
+@media screen and (max-width: 1280px) {
+  .testimonials-component .swiper-wrapper .swiper-slide .card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .testimonials-component .swiper-wrapper .swiper-slide .card {
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+}
+.testimonials-component .swiper-wrapper .swiper-slide .img-card {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 15rem;
+  border: 0.1rem solid #f4ce14;
+  box-shadow: 0 0 5rem rgba(244, 207, 20, 0.168627451);
+}
+@media screen and (max-width: 640px) {
+  .testimonials-component .swiper-wrapper .swiper-slide .img-card {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+.testimonials-component .swiper-wrapper .swiper-slide .header-card {
+  margin-top: 3rem;
+  text-align: center;
+}
+.testimonials-component .swiper-wrapper .swiper-slide .header-card .name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: #f5f7f8;
+  font-weight: 500;
+}
+@media screen and (max-width: 640px) {
+  .testimonials-component .swiper-wrapper .swiper-slide .header-card .name {
+    font-size: 1.8rem;
+  }
+}
+.testimonials-component .swiper-wrapper .swiper-slide .header-card .fa-star {
+  font-size: 1.2rem;
+  color: #424141;
+}
+.testimonials-component .swiper-wrapper .swiper-slide .header-card .fa-star.checked {
+  color: #f4ce14;
+}
+.testimonials-component .swiper-wrapper .swiper-slide .content-container {
+  padding: 1.5rem 4.5rem 3rem 4.5rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 414px) {
+  .testimonials-component .swiper-wrapper .swiper-slide .content-container {
+    padding: 1.5rem 3rem 3rem 3rem;
+  }
+}
+.testimonials-component .swiper-wrapper .swiper-slide .content-container .content {
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #f5f7f8;
+}
+.testimonials-component .swiper-wrapper .swiper-slide .content-container .social {
+  text-align: center;
+  padding: 3rem 0 2rem 0;
+}
+.testimonials-component .swiper-wrapper .swiper-slide .content-container .social .logo-social {
+  display: inline-block;
+  text-decoration: none;
+  width: 2rem;
+  height: 2rem;
+}
+.testimonials-component .swiper-wrapper .swiper-slide .content-container .social .logo-social svg {
+  color: #f4ce14;
+}
+.testimonials-component .swiper-wrapper .swiper-slide .content-container .social .logo-social svg:hover {
+  cursor: pointer;
+  color: #e1c224;
+}
+.testimonials-component .swiper-wrapper .swiper-slide.swiper-slide-active {
+  z-index: 1;
+}
+.testimonials-component .swiper-wrapper .swiper-slide.swiper-slide-active .card {
+  background-color: transparent;
+  border: 0.2rem solid #f4ce14;
+  box-shadow: rgba(244, 207, 20, 0.168627451);
+  opacity: 1;
+  transform: scale(1.5);
+}
+@media screen and (max-width: 640px) {
+  .testimonials-component .swiper-button-disabled {
+    display: none;
+  }
+}
+.testimonials-component .swiper-button-disabled .swiper-button-prev {
+  color: #f4ce14;
+}
+.testimonials-component .swiper-button-disabled .swiper-button-prev:hover {
+  color: #e1c224;
+}
+.testimonials-component .swiper-button-disabled .swiper-button-next {
+  color: #f4ce14;
+}
+.testimonials-component .swiper-button-disabled .swiper-button-next:hover {
+  color: #e1c224;
+}
+.testimonials-component .swiper-pagination .swiper-pagination-bullet {
+  background-color: #f5f7f8;
+}
+.testimonials-component .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #f4ce14;
+}
+
 .hero-component {
   display: flex;
   gap: 12rem;
@@ -454,10 +708,10 @@ body {
   align-items: center;
   padding: 0 2rem;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .hero-component {
     margin: 12rem 0 20rem 0;
-    gap: 2rem;
+    gap: 4rem;
   }
 }
 @media screen and (max-width: 991px) {
@@ -544,9 +798,20 @@ body {
 .hero-component.left-img {
   flex-direction: row-reverse;
 }
+@media screen and (max-width: 991px) {
+  .hero-component.left-img {
+    flex-direction: column;
+  }
+}
 .hero-component .buttons-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+}
+@media screen and (max-width: 991px) {
+  .hero-component .buttons-container {
+    justify-content: center;
+  }
 }
 
 .services-component {
@@ -716,11 +981,22 @@ body {
 }
 
 .team-component {
-  margin-bottom: 25rem;
+  margin-bottom: 20rem;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 768px) {
+  .team-component {
+    margin-bottom: 10rem;
+  }
 }
 .team-component .team-intro {
   text-align: center;
   margin-bottom: 8rem;
+}
+@media screen and (max-width: 768px) {
+  .team-component .team-intro {
+    margin-bottom: 4rem;
+  }
 }
 .team-component .title {
   font-size: 5rem;
@@ -728,8 +1004,18 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  .team-component .title {
+    font-size: 3rem;
+  }
+}
 .team-component .subtitle {
   margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .team-component .subtitle {
+    font-size: 1.6rem;
+  }
 }
 .team-component .member-card {
   position: relative;
@@ -850,4 +1136,20 @@ body {
   grid-auto-rows: 50rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem 3rem;
+}
+.team-component .show-more {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: #f4ce14;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.team-component .show-more:hover {
+  text-decoration: underline;
+  color: #f4ce14;
+}
+.team-component .show-section {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 .book-appointment {
   position: relative;
-  background-image: url(/img/book-appoinment.jpg);
+  background-image: url("../img/book-appoinment.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 50rem;
@@ -8,28 +8,84 @@
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: $sm-screen) {
+    margin-bottom: 10rem;
+  }
+
   .book-appointment-bkg {
     background-color: $color-black-transp;
     height: 17rem;
     width: 100%;
     display: flex;
     gap: 2rem;
+    padding: 0 2rem;
+
+    @media screen and (max-width: $lg-screen) {
+      height: 20rem;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      height: 30rem;
+    }
   }
 
   .book-appointment-content {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4rem;
+    padding: 0 10rem;
+
+    @media screen and (max-width: $lg-screen) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      padding: 0;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    @media screen and (max-width: $sm-screen) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   .title {
     font-size: 4.8rem;
     font-weight: bold;
-    width: 30%;
+    padding-right: 2rem;
     border-right: 0.3rem solid $primary-color;
+
+    @media screen and (max-width: $max-width) {
+      font-size: 3rem;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      border-right: none;
+      padding-right: 0;
+      padding-bottom: 1rem;
+      border-bottom: 0.3rem solid $primary-color;
+      text-align: center;
+    }
   }
 
   .description {
-    width: 40%;
+    @media screen and (max-width: $sm-screen) {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+
+  .primary-button {
+    @media screen and (max-width: $sm-screen) {
+      font-size: 1.4rem;
+    }
   }
 }
