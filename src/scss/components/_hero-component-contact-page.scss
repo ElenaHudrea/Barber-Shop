@@ -1,0 +1,58 @@
+.container-info-contact {
+  margin-bottom: 20rem;
+  z-index: 1;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: $lg-screen) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  @media screen and (max-width: $md-screen) {
+    margin-bottom: 10rem;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 4rem;
+    background-color: $primary-color;
+    border-radius: 3rem;
+    color: $color-black;
+    text-align: center;
+
+    @media screen and (max-width: $md-screen) {
+      margin: 0 2rem;
+    }
+  }
+
+  .img-info {
+    max-width: 5rem;
+    width: 100%;
+    max-height: 5rem;
+    height: 100%;
+  }
+
+  .important-info {
+    width: 100%;
+    font-size: 2.4rem;
+
+    a {
+      text-decoration: none;
+      color: $color-black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 1.8rem;
+    }
+  }
+}

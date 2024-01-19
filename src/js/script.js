@@ -1,4 +1,4 @@
-// navigation hamburger
+// Navigation hamburger
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".menu");
 
@@ -69,5 +69,30 @@ $(function () {
       $(".show-section").show().css("margin-top", "4rem");
       $(".show-more").text("Show less \u21E7");
     }
+  });
+});
+
+// Slider hero
+$(document).ready(function () {
+  $(".slider-inner").slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    centerMode: true,
+    arrows: true,
+    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        },
+      },
+    ],
   });
 });

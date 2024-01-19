@@ -1,0 +1,46 @@
+.map-intro {
+  text-align: center;
+  margin-bottom: 8rem;
+
+  @media screen and (max-width: $md-screen) {
+    margin-bottom: 4rem;
+  }
+
+  .title {
+    font-size: 5rem;
+    color: $color-white;
+    font-family: $montserrat;
+    font-weight: bold;
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 3rem;
+    }
+  }
+
+  .subtitle {
+    margin-top: 2rem;
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.google-map {
+  position: relative;
+  margin-bottom: 20rem;
+  padding-bottom: 50%;
+  margin: 0 2rem 20rem 2rem;
+
+  @media screen and (max-width: $md-screen) {
+    margin-bottom: 10rem;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+}

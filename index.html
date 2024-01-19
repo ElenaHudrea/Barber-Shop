@@ -23,55 +23,70 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
     />
 
+    <!-- slick slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
   </head>
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="container">
-        <nav class="navigation-component">
-          <div class="elements-nav">
-            <a href="index.html" class="logo"
-              ><img src="img/logo/logo-white.png" alt=""
-            /></a>
+      <div class="nav-fixed">
+        <div class="container">
+          <nav class="navigation-component">
+            <div class="elements-nav">
+              <a href="index.html" class="logo"
+                ><img src="img/logo/logo-white.png" alt=""
+              /></a>
 
-            <div class="menu">
-              <ul class="list">
-                <li class="list-link">
-                  <a href="index.html" class="link-menu active">Home</a>
-                </li>
-                <li class="list-link submenu-active">
-                  <a href="about-us.html" class="link-menu space">About Us</a>
-                </li>
-                <li class="list-link">
-                  <a href="appointment.html" class="link-menu">Appointment</a>
-                </li>
-                <li class="list-link">
-                  <a href="contact.html" class="link-menu">Contact</a>
-                </li>
-              </ul>
-              <a href="#login" rel="modal:open" class="primary-button modal-btn"
-                >Login</a
-              >
-            </div>
+              <div class="menu">
+                <ul class="list">
+                  <li class="list-link">
+                    <a href="index.html" class="link-menu active">Home</a>
+                  </li>
+                  <li class="list-link submenu-active">
+                    <a href="about-us.html" class="link-menu space">About Us</a>
+                  </li>
+                  <li class="list-link">
+                    <a href="appointment.html" class="link-menu">Appointment</a>
+                  </li>
+                  <li class="list-link">
+                    <a href="contact.html" class="link-menu">Contact</a>
+                  </li>
+                </ul>
+                <a
+                  href="#login"
+                  rel="modal:open"
+                  class="primary-button modal-btn"
+                  >Login</a
+                >
+              </div>
 
-            <div class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
 
-      <div class="container header">
+      <div class="container header hero-home">
         <img
           src="img/background/background-triangle.png"
           class="triangle-bkg"
           alt=""
         />
-        <div class="hero-component">
+        <div class="hero-component hero-home">
           <div class="hero-description">
             <h1 class="hero-title">
               <span class="accent-yellow">Best</span> Barber
@@ -87,10 +102,40 @@
               >Make an appointment</a
             >
           </div>
-          <div class="hero-img">
-            <img src="img/salon/barber-shop-salon-9.jpg" alt="" />
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slider-inner">
+                <div class="item">
+                  <img
+                    src="img/salon/barber-shop-salon-9.jpg"
+                    alt=""
+                    class="full-image"
+                  />
+                </div>
+                <div class="item">
+                  <img
+                    src="img/salon/barber-shop-salon-4.jpg"
+                    alt=""
+                    class="full-image"
+                  />
+                </div>
+                <div class="item">
+                  <img
+                    src="img/salon/barber-shop-salon-12.jpg"
+                    alt=""
+                    class="half-image"
+                  />
+                </div>
+                <div class="item">
+                  <img
+                    src="img/salon/barber-shop-salon-11.jpg"
+                    alt=""
+                    class="full-image"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="img-shadow"></div>
         </div>
       </div>
     </header>
@@ -320,7 +365,13 @@
 
           <div class="footer-list">
             <p class="title-list">Contact Us</p>
-            <p class="item-list" href="#s">Cluj-Napoca, str. Florilor 34</p>
+            <a
+              href="https://www.google.com/maps/place/Strada+Florilor+34,+Flore%C8%99ti+407280/@46.740548,23.494686,17z/data=!4m6!3m5!1s0x47490fd42b403af9:0x968e99efecefac54!8m2!3d46.7405477!4d23.4946855!16s%2Fg%2F11s_v8dqm_?hl=ro&entry=ttu"
+              target="_blank"
+              class="item-list"
+              href="#s"
+              >Cluj-Napoca, Florești, str. Florilor 34</a
+            >
             <a href="mailto:barberShop@yahoo.com" class="item-list"
               >barberShop@yahoo.com</a
             >
@@ -333,6 +384,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <script src="src/js/script.js"></script>
   </body>

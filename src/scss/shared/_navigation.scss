@@ -1,5 +1,14 @@
+.nav-fixed {
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: $color-black;
+}
+
 .navigation-component {
-  padding: 6rem 2rem 0 2rem;
+  padding: 4rem 2rem 3rem 2rem;
 
   .elements-nav {
     display: flex;

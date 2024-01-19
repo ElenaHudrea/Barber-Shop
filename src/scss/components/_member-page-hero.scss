@@ -6,9 +6,10 @@
     margin-bottom: 25rem;
   }
 }
+
 .member-info {
   position: absolute;
-  top: 70rem;
+  top: 50rem;
   background-color: $gray;
   height: 20rem;
   display: flex;
@@ -22,14 +23,13 @@
   }
 
   @media screen and (max-width: $md-screen) {
-    top: 85rem;
+    top: 70rem;
   }
 
   @media screen and (max-width: $xs-screen-mid) {
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
-    top: 95rem;
     height: 30rem;
   }
 

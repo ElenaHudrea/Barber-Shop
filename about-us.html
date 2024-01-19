@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barber Shop</title>
+    <title>About Us</title>
 
     <link rel="stylesheet" href="src/scss/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,40 +21,42 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="container">
-        <nav class="navigation-component">
-          <div class="elements-nav">
-            <a href="index.html" class="logo"><img src="img/logo/logo-white.png" alt="" /></a>
+      <div class="nav-fixed">
+        <div class="container">
+          <nav class="navigation-component">
+            <div class="elements-nav">
+              <a href="index.html" class="logo"><img src="img/logo/logo-white.png" alt="" /></a>
 
-            <div class="menu">
-              <ul class="list">
-                <li class="list-link">
-                  <a href="index.html" class="link-menu">Home</a>
-                </li>
-                <li class="list-link submenu-active">
-                  <a href="about-us.html" class="link-menu space active"
-                    >About Us</a
-                  >
-                </li>
-                <li class="list-link">
-                  <a href="appointment.html" class="link-menu">Appointment</a>
-                </li>
-                <li class="list-link">
-                  <a href="contact.html" class="link-menu">Contact</a>
-                </li>
-              </ul>
-              <a href="#login" rel="modal:open" class="primary-button modal-btn"
-                >Login</a
-              >
-            </div>
+              <div class="menu">
+                <ul class="list">
+                  <li class="list-link">
+                    <a href="index.html" class="link-menu">Home</a>
+                  </li>
+                  <li class="list-link submenu-active">
+                    <a href="about-us.html" class="link-menu space active"
+                      >About Us</a
+                    >
+                  </li>
+                  <li class="list-link">
+                    <a href="appointment.html" class="link-menu">Appointment</a>
+                  </li>
+                  <li class="list-link">
+                    <a href="contact.html" class="link-menu">Contact</a>
+                  </li>
+                </ul>
+                <a href="#login" rel="modal:open" class="primary-button modal-btn"
+                  >Login</a
+                >
+              </div>
 
-            <div class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
 
       <div class="container header">
@@ -689,8 +691,13 @@
           </div>
 
           <div class="footer-list">
-            <p class="title-list">Contact Us</p>
-            <p class="item-list" href="#s">Cluj-Napoca, str. Florilor 34</p>
+            <p class="title-list">Contact Us</p><a
+            href="https://www.google.com/maps/place/Strada+Florilor+34,+Flore%C8%99ti+407280/@46.740548,23.494686,17z/data=!4m6!3m5!1s0x47490fd42b403af9:0x968e99efecefac54!8m2!3d46.7405477!4d23.4946855!16s%2Fg%2F11s_v8dqm_?hl=ro&entry=ttu"
+            target="_blank"
+            class="item-list"
+            href="#s"
+            >Cluj-Napoca, Florești, str. Florilor 34</a
+          >
             <a href="mailto:barberShop@yahoo.com" class="item-list"
               >barberShop@yahoo.com</a
             >
