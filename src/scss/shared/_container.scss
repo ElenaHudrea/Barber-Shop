@@ -23,7 +23,8 @@
       }
     }
 
-    &.hero-home {
+    &.hero-home,
+    &.hero-contact {
       .triangle-bkg {
         @media screen and (max-width: $lg-screen-max) {
           display: none;

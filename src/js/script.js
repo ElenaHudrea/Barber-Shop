@@ -96,3 +96,50 @@ $(document).ready(function () {
     ],
   });
 });
+
+$(document).ready(function () {
+  const stylistOptions = {
+    haircut: ["Stilist 1", "Stilist 2"],
+    shave: ["Stilist 3", "Stilist 4"],
+    // Adaugă alte mape pentru alte servicii și stilisti
+  };
+
+  $("#nextStep1").click(function () {
+    $("#step1").hide();
+    $("#step2").show();
+  });
+
+  $("#nextStep2").click(function () {
+    const selectedService = $('input[name="services"]:checked').val();
+    const stylistDropdown = $("#stylist");
+
+    stylistDropdown.empty();
+
+    stylistOptions[selectedService].forEach(function (stylist) {
+      stylistDropdown.append(
+        $("<option>", {
+          value: stylist,
+          text: stylist,
+        })
+      );
+    });
+
+    $("#step2").hide();
+    $("#step3").show();
+  });
+
+  $("#nextStep3").click(function () {
+    $("#step3").hide();
+    $("#step4").show();
+  });
+
+  $("#bookingForm").submit(function (e) {
+    e.preventDefault();
+
+    // Aici poți adăuga logica pentru trimiterea datelor la server sau pentru salvarea într-o bază de date
+
+    // După ce programarea este înregistrată cu succes, afișează un mesaj de confirmare
+    $("#bookingForm").hide();
+    $("#confirmationMessage").show();
+  });
+});

@@ -73,7 +73,7 @@
             </p>
             <div class="buttons-container">
               <a href="appointment.html" class="primary-button">Make an appointment</a>
-              <a href="about-us.html" class="primary-button transp">Find a barber</a>
+              <a href="#team" class="primary-button transp">Find a barber</a>
             </div>
           </div>
           <div class="hero-img">
@@ -84,7 +84,7 @@
     </header>
 
     <!-- Grid Component -->
-    <section class="container">
+    <section class="container" id="team">
       <div class="team-component">
         <div class="team-intro">
           <h2 class="title">Our <span class="accent-yellow">Team</span></h2>
@@ -107,7 +107,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
                     pariatur nemo tempore repellat?&hellip;
                   </p>
-                  <a href="#" class="member-read-more"
+                  <a href="#" class="member-read-more"onclick="redirectToMemberInfo(0)"
                     >Read more <i class="fa fa-arrow-right"></i
                   ></a>
                 </div>
@@ -125,7 +125,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
                     pariatur nemo tempore repellat?&hellip;
                   </p>
-                  <a href="member-team.html" class="member-read-more"
+                  <a href="#" class="member-read-more" onclick="redirectToMemberInfo(1)"
                     >Read more <i class="fa fa-arrow-right"></i
                   ></a>
                 </div>
@@ -143,8 +143,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
                     pariatur nemo tempore repellat?&hellip;
                   </p>
-                  <a href="#" class="member-read-more"
-                    >Read more <i class="fa fa-arrow-right"></i
+                  <a href="#" class="member-read-more" onclick="redirectToMemberInfo(2)">Read more <i class="fa fa-arrow-right"></i
                   ></a>
                 </div>
               </div>
@@ -165,7 +164,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
                     pariatur nemo tempore repellat?&hellip;
                   </p>
-                  <a href="#" class="member-read-more"
+                  <a href="#" class="member-read-more" onclick="redirectToMemberInfo(3)"
                     >Read more <i class="fa fa-arrow-right"></i
                   ></a>
                 </div>
@@ -183,7 +182,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
                     pariatur nemo tempore repellat?&hellip;
                   </p>
-                  <a href="#" class="member-read-more"
+                  <a href="#" class="member-read-more" onclick="redirectToMemberInfo(4)"
                     >Read more <i class="fa fa-arrow-right"></i
                   ></a>
                 </div>
@@ -201,7 +200,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
                     pariatur nemo tempore repellat?&hellip;
                   </p>
-                  <a href="#" class="member-read-more"
+                  <a href="#" class="member-read-more" onclick="redirectToMemberInfo(5)"
                     >Read more <i class="fa fa-arrow-right"></i
                   ></a>
                 </div>
@@ -238,7 +237,7 @@
           </div>
           <div class="buttons-container">
             <a href="appointment.html" class="primary-button">Make an appointment</a>
-            <a href="about-us.html" class="primary-button transp">Find a barber</a>
+            <a href="#team" class="primary-button transp">Find a barber</a>
           </div>
          </div>
       </div>
@@ -712,5 +711,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js'></script>
 
     <script src="src/js/script.js"></script>
+    <script src="src/js/memberTeamInfo.js"></script>
   </body>
 </html>

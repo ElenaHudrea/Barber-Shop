@@ -312,7 +312,7 @@ h6 {
   }
 }
 @media screen and (max-width: 1200px) {
-  .container.header.hero-home .triangle-bkg {
+  .container.header.hero-home .triangle-bkg, .container.header.hero-contact .triangle-bkg {
     display: none;
   }
 }
@@ -428,11 +428,12 @@ h6 {
 }
 .form-component .form-item input,
 .form-component .form-item textarea {
-  border: none;
   border-radius: 0.6rem;
   background-color: #272829;
   padding: 1.5rem;
   color: #f5f7f8;
+  outline: none;
+  border: none;
 }
 .form-component .form-item input::-moz-placeholder, .form-component .form-item textarea::-moz-placeholder {
   color: #f5f7f8;
@@ -441,6 +442,10 @@ h6 {
 .form-component .form-item textarea::placeholder {
   color: #f5f7f8;
 }
+.form-component .form-item input:focus,
+.form-component .form-item textarea:focus {
+  border: 0.1rem solid #f5f7f8;
+}
 .form-component .btn {
   font-family: "Montserrat", sans-serif;
   border: none;
@@ -448,6 +453,10 @@ h6 {
   background-color: #272829;
   padding: 1.5rem;
   color: #f5f7f8;
+}
+.form-component .btn:hover {
+  cursor: pointer;
+  background-color: #404243;
 }
 .form-component .form-img-box {
   max-width: 65rem;
@@ -1734,6 +1743,7 @@ body {
   left: 0;
   top: 0;
   position: absolute;
+  border-radius: 3rem;
 }
 
 .container-info-contact {
@@ -1895,4 +1905,33 @@ body {
   .slider-container .slick-next {
     right: 22.5rem;
   }
+}
+
+.containerr {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#confirmationMessage {
+  margin-top: 20px;
+  color: #28a745;
 }/*# sourceMappingURL=main.css.map */

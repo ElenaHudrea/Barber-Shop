@@ -60,14 +60,19 @@
 
     input,
     textarea {
-      border: none;
       border-radius: 0.6rem;
       background-color: $color-black;
       padding: 1.5rem;
       color: $color-white;
+      outline: none;
+      border: none;
 
       &::placeholder {
         color: $color-white;
+      }
+
+      &:focus {
+        border: 0.1rem solid $color-white;
       }
     }
   }
@@ -79,6 +84,11 @@
     background-color: $color-black;
     padding: 1.5rem;
     color: $color-white;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($color: $color-black, $amount: 10%);
+    }
   }
 
   .form-img-box {

@@ -85,7 +85,7 @@
         <div class="hero-component member-hero">
           <div class="hero-description">
             <h1 class="hero-title about-us-title">
-              Hey, I'm <span class="accent-yellow">John</span>
+              Hey, I'm <span class="accent-yellow" id="memberName"></span>
             </h1>
             <p class="hero-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua. Ut
@@ -97,21 +97,27 @@
             >
           </div>
           <div class="hero-img member-img">
-            <img src="img/member-team/member2.jpg" alt="" />
+            <img src="" alt="" id="memberImage" />
           </div>
         </div>
       </div>
       <div class="member-info">
         <div class="content-member-info">
-          <h3 class="number"><span class="accent-yellow">3+</span></h3>
+          <h3 class="number">
+            <span class="accent-yellow" id="experience"></span>
+          </h3>
           <p class="info">Experience</p>
         </div>
         <div class="content-member-info">
-          <h3 class="number"><span class="accent-yellow">9.55</span></h3>
+          <h3 class="number">
+            <span class="accent-yellow" id="rating"></span>
+          </h3>
           <p class="info">Rating</p>
         </div>
         <div class="content-member-info">
-          <h3 class="number"><span class="accent-yellow">23+</span></h3>
+          <h3 class="number">
+            <span class="accent-yellow" id="satisfiedClients"></span>
+          </h3>
           <p class="info">Satisfied clients</p>
         </div>
       </div>
@@ -126,20 +132,20 @@
         </p>
         <div class="price-list-container">
           <div class="price-item">
-            <p class="service">Men's cut</p>
-            <p class="price">$ 25.0</p>
+            <p class="service" id="service1"></p>
+            <p class="price" id="price1"></p>
           </div>
           <div class="price-item">
-            <p class="service">Hot towel shave</p>
-            <p class="price">$ 25.5</p>
+            <p class="service" id="service2"></p>
+            <p class="price" id="price2"></p>
           </div>
           <div class="price-item">
-            <p class="service">Beard trim</p>
-            <p class="price">$ 10.0</p>
+            <p class="service" id="service3"></p>
+            <p class="price" id="price3"></p>
           </div>
           <div class="price-item">
-            <p class="service">Kid's cut</p>
-            <p class="price">$ 15.0</p>
+            <p class="service" id="service4"></p>
+            <p class="price" id="price4"></p>
           </div>
         </div>
       </div>
@@ -254,5 +260,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
 
     <script src="src/js/script.js"></script>
+    <script src="src/js/memberTeamInfo.js"></script>
   </body>
 </html>
