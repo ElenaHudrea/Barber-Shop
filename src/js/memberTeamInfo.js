@@ -43,45 +43,36 @@ var salonMembers = [
   },
 ];
 
-// Funcție pentru redirecționarea către pagina de informații despre membru
 function redirectToMemberInfo(index) {
   var selectedMemberInfo = salonMembers[index];
 
-  // Construiți parametrii pentru URL
   var queryString =
     "?name=" +
     encodeURIComponent(selectedMemberInfo.name) +
     "&imgName=" +
     encodeURIComponent(selectedMemberInfo.imgName);
 
-  // Adăugați parametrii la URL și redirecționați
   window.location.href = "member-team.html" + queryString;
 }
 
-// Funcție pentru afișarea informațiilor despre membru pe pagina de informații
 function showMemberInfo() {
-  // Obțineți parametrii din URL
   var urlParams = new URLSearchParams(window.location.search);
   var memberName = urlParams.get("name");
   var memberImgName = urlParams.get("imgName");
 
-  // Afișați informațiile despre membru pe pagină
   document.getElementById("memberName").innerText = memberName || "";
   document.getElementById("memberImage").src = memberImgName || "";
 
-  // Găsiți membrul din array-ul salonMembers
   var selectedMember = salonMembers.find(
     (member) => member.name === memberName
   );
 
   if (selectedMember) {
-    // Afișați informațiile despre experiență, rating și clienți mulțumiți
     document.getElementById("experience").innerText =
       selectedMember.info[0] || "";
     document.getElementById("rating").innerText = selectedMember.info[1] || "";
     document.getElementById("satisfiedClients").innerText =
       selectedMember.info[2] || "";
-
     document.getElementById("service1").innerText =
       selectedMember.services[0] || "";
     document.getElementById("service2").innerText =
@@ -90,7 +81,6 @@ function showMemberInfo() {
       selectedMember.services[2] || "";
     document.getElementById("service4").innerText =
       selectedMember.services[3] || "";
-
     document.getElementById("price1").innerText =
       selectedMember.prices[0] || "";
     document.getElementById("price2").innerText =
@@ -104,5 +94,4 @@ function showMemberInfo() {
   }
 }
 
-// Apelează funcția pentru afișarea informațiilor la încărcarea paginii
 showMemberInfo();

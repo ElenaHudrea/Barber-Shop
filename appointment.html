@@ -13,6 +13,11 @@
 
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link
@@ -106,65 +111,198 @@
       </div>
     </header>
 
-    <div class="containerr">
-      <h2>Programare la Barbershop</h2>
-      <form id="bookingForm">
-        <div id="step1">
-          <h3>Alegeți serviciile dorite:</h3>
-          <div class="service-checkbox">
-            <input type="checkbox" id="haircut" name="services" value="haircut">
-            <label for="haircut">Tuns - 50 RON</label>
-          </div>
-  
-          <div class="service-checkbox">
-            <input type="checkbox" id="shave" name="services" value="shave">
-            <label for="shave">Bărbierit - 30 RON</label>
-          </div>
-          <!-- Adaugă checkbox-uri pentru alte servicii -->
-  
-          <button type="button" id="nextStep1">Următorul Pas</button>
+    <!-- APPOINTMENT FORM -->
+    <section class="container">
+      <div class="appointment-form">
+        <div class="appointment-intro">
+          <h2 class="title">
+            Make An <span class="accent-yellow">Appointment</span>
+          </h2>
+          <p class="subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
-  
-        <div id="step2" style="display: none;">
-          <label for="stylist">Stilist:</label>
-          <select id="stylist" name="stylist" required>
-            <!-- Opțiuni pentru stilistul asociat serviciului selectat -->
-          </select>
-          <button type="button" id="nextStep2">Următorul Pas</button>
-        </div>
-  
-        <div id="step3" style="display: none;">
-          <label for="date">Data:</label>
-          <input type="date" id="date" name="date" required>
-  
-          <label for="time">Ora:</label>
-          <input type="time" id="time" name="time" required>
-          <button type="button" id="nextStep3">Următorul Pas</button>
-        </div>
-  
-        <div id="step4" style="display: none;">
-          <label for="name">Nume:</label>
-          <input type="text" id="name" name="name" required>
-  
-          <label for="phone">Număr de telefon:</label>
-          <input type="tel" id="phone" name="phone" required>
-  
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-  
-          <button type="submit">Programează</button>
-        </div>
-      </form>
-  
-      <div id="confirmationMessage" style="display: none;">
-        <p>Programarea a fost înregistrată cu succes!</p>
-      </div>
-      </form>
 
-      <div id="confirmationMessage" style="display: none">
-        <p>Programarea a fost înregistrată cu succes!</p>
+        <div class="container">
+          <div class="progress-container">
+            <hr class="progress-bar-back" />
+            <hr class="progress-bar-front" />
+
+            <div class="step checked" data-step="1">
+              <i class="fas fa-1"></i>
+            </div>
+            <div class="step" data-step="2">
+              <i class="fas fa-2"></i>
+            </div>
+            <div class="step" data-step="3">
+              <i class="fas fa-3"></i>
+            </div>
+            <div class="step" data-step="4">
+              <i class="fas fa-4"></i>
+            </div>
+            <div class="step" data-step="5">
+              <i class="fas fa-5"></i>
+            </div>
+          </div>
+
+          <div class="form-container">
+            <div class="form" id="form-1">
+              <h3>Service</h3>
+              <form>
+                <div class="form-group">
+                  <label for="firstName">First Name:</label>
+                  <input type="text" class="form-control" id="firstName" />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name:</label>
+                  <input type="text" class="form-control" id="lastName" />
+                </div>
+              </form>
+            </div>
+
+            <div class="form" id="form-2">
+              <h3>Contact:</h3>
+              <form>
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number:</label>
+                  <input type="number" class="form-control" id="phoneNumber" />
+                </div>
+                <div class="form-group">
+                  <label for="emailAdd">Email Address:</label>
+                  <input type="email" class="form-control" id="emailAdd" />
+                </div>
+              </form>
+            </div>
+
+            <div class="form" id="form-3">
+              <h3>Address:</h3>
+              <form>
+                <div class="form-group">
+                  <label for="country">Country:</label>
+                  <input type="text" class="form-control" id="country" />
+                </div>
+                <div class="form-group">
+                  <label for="zipCode">Zip Code:</label>
+                  <input type="number" class="form-control" id="zipCode" />
+                </div>
+              </form>
+            </div>
+
+            <div class="form" id="form-4">
+              <h3>Birth:</h3>
+              <form>
+                <div class="form-group">
+                  <label for="dateBirth">Date of Birth:</label>
+                  <input type="date" class="form-control" id="dateBirth" />
+                </div>
+                <div class="form-group">
+                  <label for="placeBirth">Place of Birth:</label>
+                  <input type="text" class="form-control" id="placeBirth" />
+                </div>
+              </form>
+            </div>
+
+            <div class="form" id="form-5">
+              <h3>Account:</h3>
+              <form>
+                <div class="form-group">
+                  <label for="username">Username:</label>
+                  <input type="text" class="form-control" id="username" />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="number" class="form-control" id="password" />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button class="btn transp" id="prev">Back</button>
+            <button class="btn" id="next">Next Step</button>
+          </div>
+        </div>
+        <!-- <form id="bookingForm">
+          <div id="step1">
+            <h3>Alegeți serviciile dorite:</h3>
+            <div class="service-checkbox">
+              <input type="checkbox" id="haircut" name="services" value="haircut">
+              <label for="haircut">Women's cut</label>
+            </div>
+            <div class="service-checkbox">
+              <input type="checkbox" id="shave" name="services" value="shave">
+              <label for="shave">Man's cut</label>
+            </div>
+            <div class="service-checkbox">
+              <input type="checkbox" id="shave" name="services" value="shave">
+              <label for="shave">Kid's cut</label>
+            </div>
+            <div class="service-checkbox">
+              <input type="checkbox" id="shave" name="services" value="shave">
+              <label for="shave">Wash</label>
+            </div>
+            <div class="service-checkbox">
+              <input type="checkbox" id="shave" name="services" value="shave">
+              <label for="shave">Hot towel shave</label>
+            </div>
+            <div class="service-checkbox">
+              <input type="checkbox" id="shave" name="services" value="shave">
+              <label for="shave">Beard trim</label>
+            </div>
+            <div class="service-checkbox">
+              <input type="checkbox" id="shave" name="services" value="shave">
+              <label for="shave">Coloring</label>
+            </div>
+            <div class="service-checkbox">
+              <input type="checkbox" id="shave" name="services" value="shave">
+              <label for="shave">Blowout</label>
+            </div>
+
+    
+            <button type="button" id="nextStep1">Următorul Pas</button>
+          </div>
+    
+          <div id="step2" style="display: none;">
+            <label for="stylist">Stilist:</label>
+            <select id="stylist" name="stylist" required>
+            </select>
+            <button type="button" id="nextStep2">Următorul Pas</button>
+          </div>
+    
+          <div id="step3" style="display: none;">
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required>
+    
+            <label for="time">Ora:</label>
+            <input type="time" id="time" name="time" required>
+            <button type="button" id="nextStep3">Următorul Pas</button>
+          </div>
+    
+          <div id="step4" style="display: none;">
+            <label for="name">Nume:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="phone">Număr de telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <button type="submit">Programează</button>
+          </div>
+        </form>
+    
+        <div id="confirmationMessage" style="display: none;">
+          <p>Programarea a fost înregistrată cu succes!</p>
+        </div>
+        </form>
+
+        <div id="confirmationMessage" style="display: none">
+          <p>Programarea a fost înregistrată cu succes!</p>
+        </div> -->
       </div>
-    </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">

@@ -97,49 +97,100 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  const stylistOptions = {
-    haircut: ["Stilist 1", "Stilist 2"],
-    shave: ["Stilist 3", "Stilist 4"],
-    // Adaugă alte mape pentru alte servicii și stilisti
-  };
+// $(document).ready(function () {
+//   const stylistOptions = {
+//     haircut: ["Stilist 1", "Stilist 2"],
+//     shave: ["Stilist 3", "Stilist 4"],
+//     // Adaugă alte mape pentru alte servicii și stilisti
+//   };
 
-  $("#nextStep1").click(function () {
-    $("#step1").hide();
-    $("#step2").show();
-  });
+//   $("#nextStep1").click(function () {
+//     $("#step1").hide();
+//     $("#step2").show();
+//   });
 
-  $("#nextStep2").click(function () {
-    const selectedService = $('input[name="services"]:checked').val();
-    const stylistDropdown = $("#stylist");
+//   $("#nextStep2").click(function () {
+//     const selectedService = $('input[name="services"]:checked').val();
+//     const stylistDropdown = $("#stylist");
 
-    stylistDropdown.empty();
+//     stylistDropdown.empty();
 
-    stylistOptions[selectedService].forEach(function (stylist) {
-      stylistDropdown.append(
-        $("<option>", {
-          value: stylist,
-          text: stylist,
-        })
-      );
-    });
+//     stylistOptions[selectedService].forEach(function (stylist) {
+//       stylistDropdown.append(
+//         $("<option>", {
+//           value: stylist,
+//           text: stylist,
+//         })
+//       );
+//     });
 
-    $("#step2").hide();
-    $("#step3").show();
-  });
+//     $("#step2").hide();
+//     $("#step3").show();
+//   });
 
-  $("#nextStep3").click(function () {
-    $("#step3").hide();
-    $("#step4").show();
-  });
+//   $("#nextStep3").click(function () {
+//     $("#step3").hide();
+//     $("#step4").show();
+//   });
 
-  $("#bookingForm").submit(function (e) {
-    e.preventDefault();
+//   $("#bookingForm").submit(function (e) {
+//     e.preventDefault();
 
-    // Aici poți adăuga logica pentru trimiterea datelor la server sau pentru salvarea într-o bază de date
+//     // Aici poți adăuga logica pentru trimiterea datelor la server sau pentru salvarea într-o bază de date
 
-    // După ce programarea este înregistrată cu succes, afișează un mesaj de confirmare
-    $("#bookingForm").hide();
-    $("#confirmationMessage").show();
-  });
+//     // După ce programarea este înregistrată cu succes, afișează un mesaj de confirmare
+//     $("#bookingForm").hide();
+//     $("#confirmationMessage").show();
+//   });
+// });
+const nextButton = document.getElementById("next");
+const prevButton = document.getElementById("prev");
+
+const progressBarFront = document.querySelector(".progress-bar-front");
+
+const steps = document.querySelectorAll(".step");
+const forms = document.querySelectorAll(".form");
+
+let currentStep = 1;
+
+nextButton.addEventListener("click", () => {
+  currentStep++;
+  if (currentStep > steps.length) {
+    currentStep = steps.length;
+  }
+  updateProgress();
 });
+
+prevButton.addEventListener("click", () => {
+  currentStep--;
+  if (currentStep < 1) {
+    currentStep = 1;
+  }
+  updateProgress();
+});
+
+function updateProgress() {
+  steps.forEach((step, index) => {
+    if (index < currentStep) {
+      step.classList.add("checked");
+    } else {
+      step.classList.remove("checked");
+    }
+  });
+
+  const progressPercentage = ((currentStep - 1) / (steps.length - 1)) * 100;
+  progressBarFront.style.width = `${progressPercentage}%`;
+
+  prevButton.hidden = currentStep === 1;
+  nextButton.textContent = currentStep === steps.length ? "Submit" : "Next";
+
+  updateFormVisibility();
+}
+
+function updateFormVisibility() {
+  forms.forEach((form, index) => {
+    form.style.display = index + 1 === currentStep ? "block" : "none";
+  });
+}
+
+updateProgress();

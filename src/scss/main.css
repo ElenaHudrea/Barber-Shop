@@ -1907,31 +1907,162 @@ body {
   }
 }
 
-.containerr {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.appointment-form {
+  margin-bottom: 20rem;
+  padding: 0 2rem;
 }
-
-form {
-  display: grid;
-  gap: 10px;
+@media screen and (max-width: 992px) {
+  .appointment-form {
+    margin-bottom: 10rem;
+  }
 }
-
-button {
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+.appointment-form .appointment-intro {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+@media screen and (max-width: 992px) {
+  .appointment-form .appointment-intro {
+    margin-bottom: 4rem;
+  }
+}
+.appointment-form .title {
+  font-size: 5rem;
+  color: #f5f7f8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .appointment-form .title {
+    font-size: 3rem;
+  }
+}
+.appointment-form .subtitle {
+  margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .appointment-form .subtitle {
+    font-size: 1.6rem;
+  }
+}
+.appointment-form h3 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+}
+.appointment-form .container {
+  text-align: center;
+  background: linear-gradient(to bottom, #000000 0%, rgba(244, 207, 20, 0.168627451) 90%);
+  color: rgb(255, 255, 255);
+  padding: 4rem;
+  border-radius: 3rem;
+  max-width: 42rem;
+  max-height: 40rem;
+}
+.appointment-form .progress-container {
+  margin: 0 auto;
+  width: 340px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.appointment-form .progress-bar-back,
+.appointment-form .progress-bar-front {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: rgb(100, 100, 100);
   border: none;
-  border-radius: 4px;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.appointment-form .progress-bar-front {
+  background-color: #f4ce14;
+  transition: 0.4s linear width;
+}
+.appointment-form .step {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid rgb(100, 100, 100);
+  color: #d3d3d3;
+  position: relative;
+}
+.appointment-form .step.checked {
+  color: #272829;
+  border-color: #f4ce14;
+  transition: all 0.4s linear;
+  transition-delay: 0.3s;
+}
+.appointment-form .step.checked small {
+  position: absolute;
+  bottom: -20px;
+  font-family: "Montserrat", sans-serif;
+}
+.appointment-form .btn {
+  background-color: #f4ce14;
+  color: #272829;
+  text-decoration: none;
+  padding: 1.3rem 3rem;
+  border-radius: 10rem;
+  font-weight: 500;
+  white-space: nowrap;
   cursor: pointer;
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
 }
-
-button:hover {
-  background-color: #0056b3;
+.appointment-form .btn:hover {
+  background-color: #e1c224;
 }
-
-#confirmationMessage {
-  margin-top: 20px;
-  color: #28a745;
+.appointment-form .btn.transp {
+  border: 0.2rem solid #f4ce14;
+  background-color: #272829;
+  color: #f5f7f8;
+}
+.appointment-form .btn.transp:hover {
+  background-color: rgba(244, 207, 20, 0.168627451);
+}
+.appointment-form .btn:active {
+  transform: scale(0.97);
+}
+.appointment-form .btn:disabled {
+  background-color: #d3d3d3; /* Lighter disabled button color */
+}
+.appointment-form .form {
+  text-align: left;
+  margin: 2rem 0;
+}
+.appointment-form form {
+  margin: 2rem 0 3rem 0;
+}
+.appointment-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.appointment-form label {
+  font-size: 1.6rem;
+}
+.appointment-form input {
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  color: #272829;
+  outline: none;
+  border: none;
+}
+.appointment-form input::-moz-placeholder {
+  color: #424141;
+}
+.appointment-form input::placeholder {
+  color: #424141;
+}
+.appointment-form input:focus {
+  border: 0.2rem solid #f4ce14;
 }/*# sourceMappingURL=main.css.map */
