@@ -148,7 +148,7 @@
 
           <div class="form-container">
             <div class="form" id="form-1">
-              <h3>Service</h3>
+              <h3>Choose one service</h3>
               <form class="cards-container">
                 <div
                   class="card"
@@ -162,7 +162,7 @@
                   id="service2"
                   onclick="selectService('service2')"
                 >
-                  Man's cut
+                  Men's cut
                 </div>
                 <div
                   class="card"
@@ -206,21 +206,16 @@
                 >
                   Blowout
                 </div>
-                <div class="message-error-service"></div>
+                <div class="message-error-service">
+                  * Please choose one service!
+                </div>
               </form>
             </div>
 
             <div class="form" id="form-2">
-              <h3>Contact:</h3>
-              <form>
-                <div class="form-group">
-                  <label for="phoneNumber">Phone Number:</label>
-                  <input type="number" class="form-control" id="phoneNumber" />
-                </div>
-                <div class="form-group">
-                  <label for="emailAdd">Email Address:</label>
-                  <input type="email" class="form-control" id="emailAdd" />
-                </div>
+              <h3>Choose one stylist</h3>
+              <form class="stylist-cards">
+                <div id="stilistiContainer"></div>
               </form>
             </div>
 
@@ -407,5 +402,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
 
     <script src="src/js/script.js"></script>
+    <script src="src/js/memberTeamInfo.js"></script>
+    <script src="src/js/appointment.js"></script>
   </body>
 </html>

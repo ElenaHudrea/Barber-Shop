@@ -2071,6 +2071,7 @@ body {
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  margin-top: 4rem;
 }
 .appointment-form .card {
   flex: 1;
@@ -2089,8 +2090,7 @@ body {
   border: 0.3rem solid #f4ce14;
 }
 .appointment-form .message-error-service {
-  display: none;
   color: #b22222;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 500;
 }/*# sourceMappingURL=main.css.map */
