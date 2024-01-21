@@ -97,52 +97,6 @@ $(document).ready(function () {
   });
 });
 
-// $(document).ready(function () {
-//   const stylistOptions = {
-//     haircut: ["Stilist 1", "Stilist 2"],
-//     shave: ["Stilist 3", "Stilist 4"],
-//     // Adaugă alte mape pentru alte servicii și stilisti
-//   };
-
-//   $("#nextStep1").click(function () {
-//     $("#step1").hide();
-//     $("#step2").show();
-//   });
-
-//   $("#nextStep2").click(function () {
-//     const selectedService = $('input[name="services"]:checked').val();
-//     const stylistDropdown = $("#stylist");
-
-//     stylistDropdown.empty();
-
-//     stylistOptions[selectedService].forEach(function (stylist) {
-//       stylistDropdown.append(
-//         $("<option>", {
-//           value: stylist,
-//           text: stylist,
-//         })
-//       );
-//     });
-
-//     $("#step2").hide();
-//     $("#step3").show();
-//   });
-
-//   $("#nextStep3").click(function () {
-//     $("#step3").hide();
-//     $("#step4").show();
-//   });
-
-//   $("#bookingForm").submit(function (e) {
-//     e.preventDefault();
-
-//     // Aici poți adăuga logica pentru trimiterea datelor la server sau pentru salvarea într-o bază de date
-
-//     // După ce programarea este înregistrată cu succes, afișează un mesaj de confirmare
-//     $("#bookingForm").hide();
-//     $("#confirmationMessage").show();
-//   });
-// });
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
 
@@ -154,11 +108,16 @@ const forms = document.querySelectorAll(".form");
 let currentStep = 1;
 
 nextButton.addEventListener("click", () => {
-  currentStep++;
-  if (currentStep > steps.length) {
-    currentStep = steps.length;
+  if (isServiceIsSelected()) {
+    currentStep++;
+    if (currentStep > steps.length) {
+      currentStep = steps.length;
+    }
+    updateProgress();
+  } else {
+    document.getElementsByClassName(".message-error-service").textContent =
+      "Please chose one service!";
   }
-  updateProgress();
 });
 
 prevButton.addEventListener("click", () => {
@@ -186,6 +145,7 @@ function updateProgress() {
 
   updateFormVisibility();
 }
+updateProgress();
 
 function updateFormVisibility() {
   forms.forEach((form, index) => {
@@ -193,4 +153,13 @@ function updateFormVisibility() {
   });
 }
 
-updateProgress();
+function selectService(id) {
+  var cards = document.querySelectorAll(".card");
+  cards.forEach(function (card) {
+    card.classList.remove("selected");
+  });
+
+  var cardSelected = document.getElementById(id);
+  cardSelected.classList.add("selected");
+  return cardSelected;
+}
