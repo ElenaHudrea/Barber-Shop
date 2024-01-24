@@ -7,7 +7,8 @@ const steps = document.querySelectorAll(".step");
 const forms = document.querySelectorAll(".form");
 
 let currentStep = 1;
-
+let serviceBoolean = true;
+let stylistBoolean = true;
 nextButton.addEventListener("click", () => {
   if (isServiceIsSelected()) {
     currentStep++;
@@ -54,6 +55,23 @@ nextButton.addEventListener("click", () => {
       console.log("Doesn't exist information in localStorage.");
     }
     updateProgress();
+  }
+
+  if (currentStep != 1) {
+    serviceBoolean = false;
+  }
+
+  if (isStylistIsSelected()) {
+    console.log("da");
+    currentStep++;
+    if (currentStep > steps.length) {
+      currentStep = steps.length;
+    }
+    updateProgress();
+  }
+
+  if (currentStep != 2) {
+    stylistBoolean = false;
   }
 });
 
@@ -104,7 +122,9 @@ function selectService(id) {
   return cardSelected;
 }
 function isServiceIsSelected() {
-  return cardSelected !== null;
+  if (serviceBoolean == true) {
+    return cardSelected !== null;
+  }
 }
 
 var cardSelectedStylist = null;
@@ -121,5 +141,7 @@ function selectStylist(id) {
   return cardSelectedStylist;
 }
 function isStylistIsSelected() {
-  return cardSelectedStylist !== null;
+  if (stylistBoolean == true) {
+    return cardSelectedStylist !== null;
+  }
 }
