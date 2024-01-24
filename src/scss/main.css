@@ -2093,4 +2093,30 @@ body {
   color: #b22222;
   font-size: 1.4rem;
   font-weight: 500;
+}
+.appointment-form .stylist-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.appointment-form .stylist {
+  border: 0.3rem solid #f5f7f8;
+  padding: 4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #f5f7f8;
+  border-radius: 3rem;
+}
+.appointment-form .stylist:hover {
+  cursor: pointer;
+  border: 0.3rem solid #f4ce14;
+}
+.appointment-form .stylist.selected {
+  border: 0.3rem solid #f4ce14;
+}
+.appointment-form .img-stylist {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 100rem;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=main.css.map */
