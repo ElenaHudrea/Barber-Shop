@@ -465,6 +465,7 @@ h6 {
 @media screen and (max-width: 1600px) {
   .form-component .form-img-box {
     max-width: 38rem;
+    max-height: 100%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -481,6 +482,25 @@ h6 {
   .form-component .form-img-box img {
     border-radius: 0 0 2rem 2rem;
   }
+}
+.form-component .rating-box label {
+  color: #272829;
+  font-size: 1.6rem;
+}
+.form-component .rating-box .stars {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+.form-component .rating-box .stars i {
+  color: #272829;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.form-component .rating-box .stars i.active {
+  color: #f5f7f8;
 }
 
 .book-appointment {

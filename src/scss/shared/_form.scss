@@ -97,6 +97,7 @@
 
     @media screen and (max-width: 1600px) {
       max-width: 38rem;
+      max-height: 100%;
     }
 
     @media screen and (max-width: $md-screen) {
@@ -110,6 +111,31 @@
 
       @media screen and (max-width: $md-screen) {
         border-radius: 0 0 2rem 2rem;
+      }
+    }
+  }
+
+  .rating-box {
+    label {
+      color: $color-black;
+      font-size: 1.6rem;
+    }
+
+    .stars {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-top: 0.8rem;
+
+      i {
+        color: $color-black;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &.active {
+          color: $color-white;
+        }
       }
     }
   }
