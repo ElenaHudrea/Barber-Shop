@@ -43,6 +43,13 @@
     }
   }
 
+  .error {
+    color: $error-color !important;
+    font-size: 1.2rem !important;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
   .form-item {
     display: flex;
     flex-direction: column;
@@ -73,6 +80,12 @@
 
       &:focus {
         border: 0.1rem solid $color-white;
+      }
+
+      &.error {
+        border: 0.3rem solid $error-color;
+        font-weight: 500;
+        color: $error-color;
       }
     }
   }
@@ -137,6 +150,15 @@
           color: $color-white;
         }
       }
+    }
+  }
+
+  .message {
+    color: $color-black;
+    display: none;
+
+    &.active {
+      display: block;
     }
   }
 }

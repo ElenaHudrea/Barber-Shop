@@ -17,6 +17,8 @@
     gap: 20rem;
     flex-wrap: wrap;
     padding-right: 2rem;
+    margin: 0 auto;
+    width: 75%;
 
     @media screen and (max-width: 1600px) {
       gap: 12rem;

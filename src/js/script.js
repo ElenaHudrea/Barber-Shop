@@ -97,6 +97,22 @@ $(document).ready(function () {
   });
 });
 
+// Back to top button
+$(function () {
+  $(".back-to-top").hide();
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 200) {
+      $(".back-to-top").fadeIn(1);
+    } else {
+      $(".back-to-top").fadeOut();
+    }
+  });
+
+  $(".back-to-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+});
+
 //Rating stars
 const stars = document.querySelectorAll(".stars i");
 
@@ -108,4 +124,170 @@ stars.forEach((star, index1) => {
         : star.classList.remove("active");
     });
   });
+});
+
+// Circle Progress Bar
+$(function () {
+  $("#form").addClass("active");
+  const svgCircleBar = $(".radial-progress");
+  $(svgCircleBar).find($(".complete")).removeAttr("style");
+  $.validator.addMethod(
+    "lettersOnly",
+    function (value, element) {
+      return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
+    },
+    "Please enter letters only."
+  );
+
+  $("#form").validate({
+    rules: {
+      fullName: {
+        required: true,
+        minlength: 3,
+        lettersOnly: true,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      Review: {
+        required: true,
+      },
+    },
+    messages: {
+      fullName: {
+        minlength: "Please enter at least 3 characters.",
+      },
+    },
+    submitHandler: function (form) {
+      $("#circle-bar").prop("disabled", true);
+
+      $(".radial-progress").toggleClass("active");
+      $(".member").toggleClass("active");
+      percent = $(svgCircleBar).data("percentage");
+      radius = $(svgCircleBar).find("circle.complete").attr("r");
+      circumference = 2 * Math.PI * radius;
+      strokeDashOffset = circumference - (percent * circumference) / 100;
+      $("#percentage-text").text(strokeDashOffset);
+
+      $(svgCircleBar)
+        .find("circle.complete")
+        .animate(
+          { "stroke-dashoffset": strokeDashOffset },
+          {
+            duration: 3000,
+            progress: function (promise, progress, ms) {
+              $(".percentage").text(Math.round(progress * 100) + "%");
+            },
+            complete: function () {
+              saveDataToLocalStorage();
+              form.submit();
+            },
+          }
+        );
+    },
+  });
+
+  function saveDataToLocalStorage() {
+    var fullName = $("#fullName").val();
+    var email = $("#email").val();
+    var rating = $(".stars").find(".active").length;
+    var review = $("textarea[name='Review']").val();
+
+    var existingData = JSON.parse(localStorage.getItem("formData"));
+    if (!Array.isArray(existingData)) {
+      existingData = [];
+    }
+
+    existingData.push({
+      fullName: fullName,
+      email: email,
+      rating: rating,
+      review: review,
+    });
+
+    localStorage.setItem("formData", JSON.stringify(existingData));
+  }
+});
+
+$(function () {
+  $("#form-contact").addClass("active");
+  const svgCircleBar = $(".radial-progress");
+  $(svgCircleBar).find($(".complete")).removeAttr("style");
+
+  $.validator.addMethod(
+    "lettersOnly",
+    function (value, element) {
+      return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
+    },
+    "Please enter letters only."
+  );
+
+  $("#form-contact").validate({
+    rules: {
+      fullName: {
+        required: true,
+        minlength: 3,
+        lettersOnly: true,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      Message: {
+        required: true,
+      },
+    },
+    messages: {
+      fullName: {
+        minlength: "Please enter at least 3 characters.",
+      },
+    },
+    submitHandler: function (form) {
+      $("#circle-bar").prop("disabled", true);
+
+      $(".radial-progress").toggleClass("active");
+      $(".member").toggleClass("active");
+      percent = $(svgCircleBar).data("percentage");
+      radius = $(svgCircleBar).find("circle.complete").attr("r");
+      circumference = 2 * Math.PI * radius;
+      strokeDashOffset = circumference - (percent * circumference) / 100;
+      $("#percentage-text").text(strokeDashOffset);
+
+      $(svgCircleBar)
+        .find("circle.complete")
+        .animate(
+          { "stroke-dashoffset": strokeDashOffset },
+          {
+            duration: 3000,
+            progress: function (promise, progress, ms) {
+              $(".percentage").text(Math.round(progress * 100) + "%");
+            },
+            complete: function () {
+              saveDataToLocalStorage();
+              form.submit();
+            },
+          }
+        );
+    },
+  });
+
+  function saveDataToLocalStorage() {
+    var fullName = $("#fullName").val();
+    var email = $("#email").val();
+    var message = $("textarea[name='Message']").val();
+
+    var existingData = JSON.parse(localStorage.getItem("formDataContact"));
+    if (!Array.isArray(existingData)) {
+      existingData = [];
+    }
+
+    existingData.push({
+      fullName: fullName,
+      email: email,
+      message: message,
+    });
+
+    localStorage.setItem("formDataContact", JSON.stringify(existingData));
+  }
 });

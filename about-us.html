@@ -6,7 +6,10 @@
     <title>About Us</title>
 
     <link rel="stylesheet" href="src/scss/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
 
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.css" rel="stylesheet"/>
@@ -22,7 +25,6 @@
     <!-- HEADER -->
     <header class="header">
       <div class="nav-fixed">
-        <div class="container">
           <nav class="navigation-component">
             <div class="elements-nav">
               <a href="index.html" class="logo"><img src="img/logo/logo-white.png" alt="" /></a>
@@ -56,12 +58,11 @@
               </div>
             </div>
           </nav>
-        </div>
+        
       </div>
 
-      <div class="container header">
-        <img src="img/background/background-triangle.png" class="triangle-bkg" alt="" />
-        <div class="hero-component left-img">
+      <div class="hero-about">
+        <div class="hero-component left-img about-hero">
           <div class="hero-description">
             <h1 class="hero-title about-us-title">
               Know Us <span class="accent-yellow">Better</span>
@@ -76,12 +77,17 @@
               <a href="#team" class="primary-button transp">Find a barber</a>
             </div>
           </div>
-          <div class="hero-img">
-            <img src="img/salon/barber-shop-salon-6.jpg" alt="" />
+          <div class="hero-img about-img">
+            <img src="img/icons/Our Team(1).png" alt="" />
           </div>
         </div>
       </div>
     </header>
+
+     <!-- Back to top Button -->
+     <a href="#" class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
 
     <!-- Grid Component -->
     <section class="container" id="team">
@@ -670,7 +676,6 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="container">
         <div class="footer-links">
           <a href="index.html" class="logo">
             <img src="img/logo/logo-black.png" alt="Logo" />
@@ -695,7 +700,7 @@
             target="_blank"
             class="item-list"
             href="#s"
-            >Cluj-Napoca, Florești, str. Florilor 34</a
+            >Cluj-Napoca, Florești,<br> str. Florilor 34</a
           >
             <a href="mailto:barberShop@yahoo.com" class="item-list"
               >barberShop@yahoo.com</a
@@ -703,7 +708,7 @@
             <a href="tel:+40745667893" class="item-list">+40745667893</a>
           </div>
         </div>
-      </div>
+   
     </footer>
 
     <script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>

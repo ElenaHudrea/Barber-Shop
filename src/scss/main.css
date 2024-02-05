@@ -53,6 +53,8 @@ h6 {
 
 .navigation-component {
   padding: 4rem 2rem 3rem 2rem;
+  width: 75%;
+  margin: 0 auto;
 }
 .navigation-component .elements-nav {
   display: flex;
@@ -215,6 +217,8 @@ h6 {
   gap: 20rem;
   flex-wrap: wrap;
   padding-right: 2rem;
+  margin: 0 auto;
+  width: 75%;
 }
 @media screen and (max-width: 1600px) {
   .footer .footer-links {
@@ -411,6 +415,12 @@ h6 {
     gap: 2.5rem;
   }
 }
+.form-component .error {
+  color: #ff0101 !important;
+  font-size: 1.2rem !important;
+  display: block;
+  margin-top: 0.5rem;
+}
 .form-component .form-item {
   display: flex;
   flex-direction: column;
@@ -445,6 +455,12 @@ h6 {
 .form-component .form-item input:focus,
 .form-component .form-item textarea:focus {
   border: 0.1rem solid #f5f7f8;
+}
+.form-component .form-item input.error,
+.form-component .form-item textarea.error {
+  border: 0.3rem solid #ff0101;
+  font-weight: 500;
+  color: #ff0101;
 }
 .form-component .btn {
   font-family: "Montserrat", sans-serif;
@@ -501,6 +517,13 @@ h6 {
 }
 .form-component .rating-box .stars i.active {
   color: #f5f7f8;
+}
+.form-component .message {
+  color: #272829;
+  display: none;
+}
+.form-component .message.active {
+  display: block;
 }
 
 .book-appointment {
@@ -780,6 +803,46 @@ body {
   background-color: #f4ce14;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  background-color: #f4ce14;
+  border-radius: 50%;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #272829;
+  z-index: 3;
+}
+@media screen and (max-width: 1024px) {
+  .back-to-top {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .back-to-top {
+    right: 1rem;
+  }
+}
+.back-to-top .fa {
+  padding: 1rem 0;
+}
+@media screen and (max-width: 1024px) {
+  .back-to-top .fa {
+    padding: 0.6rem 0;
+  }
+}
+.back-to-top:hover {
+  background-color: #e1c224;
+  transition: transform 250ms;
+  transform: translateY(-10px);
+}
+
 .hero-component {
   position: relative;
   display: flex;
@@ -796,7 +859,11 @@ body {
 }
 @media screen and (max-width: 991px) {
   .hero-component.hero-home {
-    margin: 8rem 0 15rem 0;
+    margin: 13rem 0 10rem 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-component.hero-home {
     flex-direction: column;
     gap: 8rem;
   }
@@ -822,6 +889,16 @@ body {
 @media screen and (max-width: 1600px) {
   .hero-component.member-hero {
     margin: 16rem 0rem 10rem 0rem;
+    gap: 8rem;
+  }
+}
+.hero-component.appoinment-hero, .hero-component.about-hero {
+  margin: 20rem 0 20rem 0;
+}
+@media screen and (max-width: 992px) {
+  .hero-component.appoinment-hero, .hero-component.about-hero {
+    margin: 13rem 0 8rem 0;
+    gap: 2rem;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -920,6 +997,9 @@ body {
     max-width: 30rem;
   }
 }
+.hero-component .hero-img.appointment-img img, .hero-component .hero-img.about-img img {
+  border: none;
+}
 .hero-component .img-shadow {
   background-color: #f4ce14;
   position: absolute;
@@ -969,6 +1049,19 @@ body {
   .contact-page-hero-description {
     gap: 3rem;
   }
+}
+
+.hero-about {
+  width: 90%;
+  margin: 0 auto;
+}
+.hero-about .hero-component {
+  gap: 10rem;
+  margin-top: 16rem;
+}
+.hero-about .hero-img {
+  max-width: 50rem;
+  max-height: 50rem;
 }
 
 .services-component {
@@ -2110,7 +2203,7 @@ body {
   border: 0.3rem solid #f4ce14;
 }
 .appointment-form .message-error-service {
-  color: #b22222;
+  color: #ff0101;
   font-size: 1.4rem;
   font-weight: 500;
 }
@@ -2139,4 +2232,33 @@ body {
   height: 25rem;
   border-radius: 100rem;
   margin-bottom: 2rem;
+}
+
+.circle-bar .radial-progress {
+  display: none;
+  height: auto;
+  max-width: 6rem;
+  transform: rotate(-90deg);
+  width: 100%;
+  margin: 0 auto;
+}
+.circle-bar .radial-progress.active {
+  display: block;
+}
+.circle-bar circle {
+  fill: transparent;
+  stroke-dashoffset: 219.9114857513; /* Circumference */
+  stroke-width: 10;
+  stroke: #272829;
+}
+.circle-bar .incomplete {
+  opacity: 0.25;
+}
+.circle-bar .complete {
+  stroke-dasharray: 219.9114857513; /* Circumference */
+}
+.circle-bar .percentage {
+  text-align: center;
+  padding-top: 1rem;
+  color: #272829;
 }/*# sourceMappingURL=main.css.map */

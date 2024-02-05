@@ -1,0 +1,35 @@
+.circle-bar {
+  .radial-progress {
+    display: none;
+    height: auto;
+    max-width: 6rem;
+    transform: rotate(-90deg);
+    width: 100%;
+    margin: 0 auto;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  circle {
+    fill: transparent;
+    stroke-dashoffset: 219.91148575129; /* Circumference */
+    stroke-width: 10;
+    stroke: $color-black;
+  }
+
+  .incomplete {
+    opacity: 0.25;
+  }
+
+  .complete {
+    stroke-dasharray: 219.91148575129; /* Circumference */
+  }
+
+  .percentage {
+    text-align: center;
+    padding-top: 1rem;
+    color: $color-black;
+  }
+}

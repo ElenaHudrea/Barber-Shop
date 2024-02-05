@@ -13,7 +13,10 @@
     }
 
     @media screen and (max-width: $sm-screen-max) {
-      margin: 8rem 0 15rem 0;
+      margin: 13rem 0 10rem 0;
+    }
+
+    @media screen and (max-width: $sm-screen-max) {
       flex-direction: column;
       gap: 8rem;
     }
@@ -39,6 +42,17 @@
   &.member-hero {
     @media screen and (max-width: 1600px) {
       margin: 16rem 0rem 10rem 0rem;
+      gap: 8rem;
+    }
+  }
+
+  &.appoinment-hero,
+  &.about-hero {
+    margin: 20rem 0 20rem 0;
+
+    @media screen and (max-width: $md-screen) {
+      margin: 13rem 0 8rem 0;
+      gap: 2rem;
     }
   }
 
@@ -134,6 +148,13 @@
         max-width: 30rem;
       }
     }
+
+    &.appointment-img,
+    &.about-img {
+      img {
+        border: none;
+      }
+    }
   }
 
   .img-shadow {
@@ -182,5 +203,20 @@
 
   @media screen and (max-width: $lg-screen) {
     gap: 3rem;
+  }
+}
+
+.hero-about {
+  width: 90%;
+  margin: 0 auto;
+
+  .hero-component {
+    gap: 10rem;
+    margin-top: 16rem;
+  }
+
+  .hero-img {
+    max-width: 50rem;
+    max-height: 50rem;
   }
 }
