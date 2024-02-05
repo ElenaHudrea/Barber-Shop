@@ -211,12 +211,28 @@
   margin: 0 auto;
 
   .hero-component {
-    gap: 10rem;
+    gap: 6rem;
     margin-top: 16rem;
   }
 
   .hero-img {
-    max-width: 50rem;
+    max-width: 53rem;
     max-height: 50rem;
+  }
+
+  .about-img {
+    position: relative;
+    cursor: pointer;
+    perspective: 800px;
+  }
+
+  #about-img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .about-img:hover #about-img {
+    transform: rotateY(20deg);
   }
 }

@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  padding: 0 2rem;
 
   @media screen and (max-width: $md-screen) {
     flex-direction: column-reverse;
