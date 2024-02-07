@@ -1,5 +1,6 @@
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
+const submitButton = document.getElementById("next");
 
 const progressBarFront = document.querySelector(".progress-bar-front");
 
@@ -11,8 +12,8 @@ let serviceBoolean = true;
 let stylistBoolean = true;
 let dateAndTimeBoolean = true;
 let personalDate = true;
-var membersServiceSelected = [];
-var freeDate = false;
+let membersServiceSelected = [];
+let freeDate = false;
 
 nextButton.addEventListener("click", () => {
   console.log(currentStep);
@@ -23,14 +24,14 @@ nextButton.addEventListener("click", () => {
     }
 
     if (localStorage.getItem("salonMembersInfo")) {
-      var salonMembers = JSON.parse(localStorage.getItem("salonMembersInfo"));
-      var ServiceSelected = localStorage.getItem("ServiceSelected");
+      let salonMembers = JSON.parse(localStorage.getItem("salonMembersInfo"));
+      let ServiceSelected = localStorage.getItem("ServiceSelected");
 
-      var container = document.querySelector(".stylist-cards");
-      for (var i = 0; i < salonMembers.length; i++) {
-        var member = salonMembers[i];
-        var services = member.services;
-        var indexServ = services.indexOf(ServiceSelected);
+      let container = document.querySelector(".stylist-cards");
+      for (let i = 0; i < salonMembers.length; i++) {
+        let member = salonMembers[i];
+        let services = member.services;
+        let indexServ = services.indexOf(ServiceSelected);
 
         if (indexServ !== -1) {
           membersServiceSelected.push({
@@ -40,7 +41,7 @@ nextButton.addEventListener("click", () => {
           });
 
           (function (index) {
-            var divStylist = document.createElement("div");
+            let divStylist = document.createElement("div");
             divStylist.className = "stylist";
             divStylist.id = "stylist-" + salonMembers[index].name.toLowerCase();
             divStylist.onclick = function () {
@@ -49,17 +50,17 @@ nextButton.addEventListener("click", () => {
               );
             };
 
-            var img = document.createElement("img");
+            let img = document.createElement("img");
             img.src = salonMembers[index].imgName;
             img.alt = salonMembers[index].name;
             img.className = "img-stylist";
             divStylist.appendChild(img);
 
-            var nameStylist = document.createElement("p");
+            let nameStylist = document.createElement("p");
             nameStylist.textContent = salonMembers[index].name;
             divStylist.appendChild(nameStylist);
 
-            var priceService = document.createElement("p");
+            let priceService = document.createElement("p");
             priceService.textContent =
               "Price is: " + salonMembers[index].prices[indexServ];
             priceService.className = "price-service";
@@ -114,6 +115,7 @@ nextButton.addEventListener("click", () => {
     dateAndTimeBoolean = false;
   }
 
+  let container = document.querySelector(".overview");
   if (currentStep == 4 && isPersonalDate()) {
     currentStep++;
     if (currentStep > steps.length) {
@@ -121,10 +123,66 @@ nextButton.addEventListener("click", () => {
     }
     savePersonalDate();
     updateProgress();
+
+    document.getElementById("fullName").value = "";
+    document.getElementById("phone").value = "";
   }
 
   if (currentStep != 4) {
     personalDate = false;
+  }
+
+  if (currentStep == 5) {
+    currentStep++;
+    if (currentStep > steps.length) {
+      currentStep = steps.length;
+    }
+
+    if (container.hasChildNodes()) {
+      container.innerHTML = "";
+      let successMessage = document.createElement("p");
+      successMessage.textContent = "Appointment successfully saved!";
+      successMessage.className = "message-success";
+      container.appendChild(successMessage);
+
+      const buttonContainer = document.getElementById("button-container");
+      const informationsTitle = document.getElementById("informations");
+      const steps = document.getElementById("steps");
+      const close = document.getElementById("closeButton");
+
+      buttonContainer.style.display = "none";
+      informationsTitle.style.display = "none";
+      steps.style.display = "none";
+      close.style.display = "none";
+    } else {
+      let divOverview = document.createElement("div");
+      divOverview.className = "container-overview";
+
+      let service = document.createElement("p");
+      service.textContent =
+        "Service selected: " + localStorage.getItem("ServiceSelected");
+      service.className = "service-form";
+      divOverview.appendChild(service);
+
+      let stylist = document.createElement("p");
+      stylist.textContent =
+        "Stylist and price: " + localStorage.getItem("StylistSelected");
+      stylist.className = "stylist-form";
+      divOverview.appendChild(stylist);
+
+      let date = document.createElement("p");
+      date.textContent = "Date appointment: " + dateForm;
+      date.className = "date-form";
+      divOverview.appendChild(date);
+
+      let time = document.createElement("p");
+      time.textContent = "Time: " + timeForm;
+      time.className = "time-form";
+      divOverview.appendChild(time);
+
+      container.appendChild(divOverview);
+    }
+    updateProgress();
   }
 });
 
@@ -141,7 +199,7 @@ prevButton.addEventListener("click", () => {
     console.log(membersServiceSelected);
     serviceBoolean = true;
 
-    var container = document.querySelector(".stylist-cards");
+    let container = document.querySelector(".stylist-cards");
     while (container.firstChild) {
       container.removeChild(container.firstChild);
     }
@@ -153,6 +211,10 @@ prevButton.addEventListener("click", () => {
 
   if (currentStep == 3) {
     dateAndTimeBoolean = true;
+  }
+
+  if (currentStep == 4) {
+    personalDate = true;
   }
 });
 
@@ -181,10 +243,10 @@ function updateFormVisibility() {
   });
 }
 
-var cardSelected = null;
-
+// step 1
+let cardSelected = null;
 function selectService(id) {
-  var cards = document.querySelectorAll(".card");
+  let cards = document.querySelectorAll(".card");
 
   cards.forEach(function (card) {
     card.classList.remove("selected");
@@ -203,7 +265,8 @@ function isServiceIsSelected() {
   }
 }
 
-var cardSelectedStylist = null;
+// step 2
+let cardSelectedStylist = null;
 function selectStylist(id) {
   var stylistCards = document.querySelectorAll(".stylist");
   stylistCards.forEach(function (card) {
@@ -224,22 +287,28 @@ function isStylistIsSelected() {
 
 // step 3
 function isDateAndTimeSelected() {
-  var date = document.getElementById("date").value;
-  var time = document.getElementById("time").value;
+  let date = document.getElementById("date").value;
+  let time = document.getElementById("time").value;
   return date !== "" && time !== "";
 }
 
+let dateForm = null;
+let timeForm = null;
+let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
 function saveAppointment() {
-  var date = $("#date").val();
-  var time = $("#time").val();
-  var stylistFromLocal = localStorage.getItem("StylistSelected");
+  let date = $("#date").val();
+  let time = $("#time").val();
+
+  dateForm = date;
+  timeForm = time;
+  let stylistFromLocal = localStorage.getItem("StylistSelected");
   if (stylistFromLocal) {
     let words = stylistFromLocal.split(" ");
     let name = words[0];
     var stylist = name;
   }
 
-  var appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+  // let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
 
   existingAppointment = appointments.find(
     (appointment) =>
@@ -247,7 +316,6 @@ function saveAppointment() {
       appointment.time === time &&
       appointment.stylist === stylist
   );
-  saveAppointmentBoolean = existingAppointment;
 
   if (existingAppointment) {
     console.log("Appointment already exists!");
@@ -261,7 +329,7 @@ function saveAppointment() {
     console.log("Appointment saved successfully!");
     freeDate = true;
   }
-
+  // localStorage.removeItem("appointments");
   return existingAppointment;
 }
 
@@ -302,8 +370,8 @@ $(function () {
   $.validator.addMethod(
     "isValidTime",
     function (value, element) {
-      var allowedTimes = ["00"];
-      var selectedTime = value.split(":");
+      let allowedTimes = ["00"];
+      let selectedTime = value.split(":");
       return allowedTimes.includes(selectedTime[1]);
     },
     "Please select a valid time. Exemple 14:00, 15:00 are allowed."
@@ -350,15 +418,19 @@ $(function () {
 
 // step 4
 function isPersonalDate() {
-  var fullName = document.getElementById("fullName").value;
-  var phone = document.getElementById("phone").value;
+  let fullName = document.getElementById("fullName").value;
+  let phone = document.getElementById("phone").value;
   return fullName !== "" && phone !== "";
 }
 
+let fullNameForm = null;
+let phoneForm = null;
 function savePersonalDate() {
   const fullName = document.getElementById("fullName").value;
   const phone = document.getElementById("phone").value;
 
+  fullNameForm = fullName;
+  phoneForm = phone;
   const userData = {
     fullName: fullName,
     phone: phone,
@@ -407,4 +479,15 @@ $(function () {
     },
     submitHandler: function (form) {},
   });
+});
+
+// Adaugă event listener pentru butonul "Close"
+const closeButton = document.getElementById("closeButton");
+closeButton.addEventListener("click", function () {
+  if (currentStep > 3) {
+    appointments.pop();
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+    localStorage.removeItem("userData");
+  }
+  location.reload();
 });

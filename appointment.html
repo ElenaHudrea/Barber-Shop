@@ -119,8 +119,8 @@
           </p>
         </div>
 
-        <div class="container">
-          <div class="progress-container">
+        <div class="container appointment-form-container">
+          <div class="progress-container" id="steps">
             <hr class="progress-bar-back" />
             <hr class="progress-bar-front" />
 
@@ -254,6 +254,7 @@
                     id="fullName"
                     required
                     class="input-form"
+                    placeholder="John Dale"
                   />
                 </div>
                 <div class="item-form">
@@ -268,20 +269,23 @@
                     class="input-form"
                     minlength="10"
                     maxlength="10"
+                    placeholder="Phone number"
                   />
                 </div>
               </form>
             </div>
 
             <div class="form" id="form-5">
-              <h3>Overview</h3>
+              <h3 id="informations">Appointment informations</h3>
+              <div class="overview"></div>
             </div>
           </div>
 
-          <div class="button-container">
+          <div class="button-container" id="button-container">
             <button class="btn transp" id="prev">Back</button>
-            <button class="btn" id="next">Next Step</button>
+            <button class="btn" id="next">Next</button>
           </div>
+          <button class="btn" id="closeButton"><i class="fa fa-x"></i></button>
         </div>
       </div>
     </section>
