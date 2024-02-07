@@ -32,6 +32,12 @@
       }
     }
 
+    &.hero-appointment {
+      .triangle-bkg {
+        display: none;
+      }
+    }
+
     .img-contact-page {
       position: absolute;
       right: 0;

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Colors */
 /* Trans */
 /* Shadow */
@@ -147,19 +146,19 @@ h6 {
     top: 4rem;
     padding-bottom: 5rem;
     flex-direction: column;
-    background-color: rgba(39, 40, 41, 0.901);
+    background-color: #272829;
     width: 100%;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
     gap: 4rem;
     z-index: 3;
+    box-shadow: 0 0.4rem 0.6rem -0.2rem #f4ce14;
   }
   .navigation-component .menu.active {
     left: 0;
   }
   .navigation-component .primary-button {
-    width: 10%;
     margin: 0 auto;
   }
   .navigation-component .list {
@@ -180,8 +179,8 @@ h6 {
     color: #272829;
   }
   .navigation-component .link-menu {
-    padding: 0 0 0rem 2rem;
     color: #f5f7f8;
+    font-weight: 500;
   }
   .navigation-component .hamburger {
     display: block;
@@ -319,6 +318,9 @@ h6 {
   .container.header.hero-home .triangle-bkg, .container.header.hero-contact .triangle-bkg {
     display: none;
   }
+}
+.container.header.hero-appointment .triangle-bkg {
+  display: none;
 }
 .container.header .img-contact-page {
   position: absolute;
@@ -1933,11 +1935,15 @@ body {
 .slider-container {
   position: relative;
   width: 50%;
-  /* Adaugă o clasă pentru a seta dimensiunile pentru imagini întregi */
 }
 @media screen and (max-width: 992px) {
   .slider-container {
     width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider-container {
+    width: 90%;
   }
 }
 .slider-container .slider {
@@ -1963,7 +1969,22 @@ body {
 }
 @media screen and (max-width: 992px) {
   .slider-container .item {
+    max-width: 32rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .slider-container .item {
+    max-width: 26rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .slider-container .item {
     max-width: 20rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .slider-container .item {
+    max-width: 16rem;
   }
 }
 .slider-container .item img {
@@ -2219,6 +2240,10 @@ body {
   color: #ff0101;
   font-size: 1.4rem;
   font-weight: 500;
+  display: none;
+}
+.appointment-form .message-error-service.active {
+  display: block;
 }
 .appointment-form .stylist-cards {
   display: flex;
@@ -2245,6 +2270,21 @@ body {
   height: 25rem;
   border-radius: 100rem;
   margin-bottom: 2rem;
+}
+.appointment-form .price-service {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+.appointment-form .item-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  gap: 1rem;
+  text-align: left;
+}
+.appointment-form .error {
+  font-size: 1.4rem;
+  color: #ff0101;
 }
 
 .circle-bar .radial-progress {

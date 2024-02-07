@@ -102,7 +102,6 @@
     }
   }
 
-  // mobile navigation
   @media screen and (max-width: 1024px) {
     .menu {
       position: fixed;
@@ -110,13 +109,14 @@
       top: 4rem;
       padding-bottom: 5rem;
       flex-direction: column;
-      background-color: $color-black-transp;
+      background-color: $color-black;
       width: 100%;
       border-radius: 10px;
       text-align: center;
       transition: 0.3s;
       gap: 4rem;
       z-index: 3;
+      box-shadow: 0 0.4rem 0.6rem -0.2rem $primary-color;
 
       &.active {
         left: 0;
@@ -124,7 +124,6 @@
     }
 
     .primary-button {
-      width: 10%;
       margin: 0 auto;
     }
 
@@ -151,8 +150,8 @@
     }
 
     .link-menu {
-      padding: 0 0 0rem 2rem;
       color: $color-white;
+      font-weight: 500;
     }
 
     .hamburger {

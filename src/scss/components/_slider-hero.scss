@@ -6,6 +6,10 @@
     width: 70%;
   }
 
+  @media screen and (max-width: $sm-screen) {
+    width: 90%;
+  }
+
   .slider {
     width: 100%;
   }
@@ -28,7 +32,19 @@
     }
 
     @media screen and (max-width: $md-screen) {
+      max-width: 32rem;
+    }
+
+    @media screen and (max-width: 520px) {
+      max-width: 26rem;
+    }
+
+    @media screen and (max-width: 450px) {
       max-width: 20rem;
+    }
+
+    @media screen and (max-width: 370px) {
+      max-width: 16rem;
     }
 
     img {
@@ -42,7 +58,6 @@
     width: 50%;
   }
 
-  /* Adaugă o clasă pentru a seta dimensiunile pentru imagini întregi */
   .full-image {
     width: 100%;
   }

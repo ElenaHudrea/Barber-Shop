@@ -201,9 +201,6 @@
                 >
                   Blowout
                 </div>
-                <div class="message-error-service">
-                  * Please choose one service!
-                </div>
               </form>
             </div>
 
@@ -213,45 +210,71 @@
             </div>
 
             <div class="form" id="form-3">
-              <h3>Address:</h3>
-              <form>
-                <div class="form-group">
-                  <label for="country">Country:</label>
-                  <input type="text" class="form-control" id="country" />
+              <h3>Choose date and time</h3>
+              <form id="form-appointment">
+                <div class="item-form">
+                  <label for="date" class="label-form"
+                    >Date <span class="required">*</span></label
+                  >
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    required
+                    class="input-form"
+                  />
                 </div>
-                <div class="form-group">
-                  <label for="zipCode">Zip Code:</label>
-                  <input type="number" class="form-control" id="zipCode" />
+                <div class="item-form">
+                  <label for="time" class="label-form"
+                    >Select a time <span class="required">*</span></label
+                  >
+                  <input
+                    type="time"
+                    name="time"
+                    id="time"
+                    min="09:00"
+                    max="21:00"
+                    required
+                    class="input-form"
+                  />
                 </div>
               </form>
             </div>
 
             <div class="form" id="form-4">
-              <h3>Birth:</h3>
-              <form>
-                <div class="form-group">
-                  <label for="dateBirth">Date of Birth:</label>
-                  <input type="date" class="form-control" id="dateBirth" />
+              <h3>Personal date</h3>
+              <form id="form-personal-info">
+                <div class="item-form">
+                  <label for="fullName" class="label-form"
+                    >Full name <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="fullName"
+                    id="fullName"
+                    required
+                    class="input-form"
+                  />
                 </div>
-                <div class="form-group">
-                  <label for="placeBirth">Place of Birth:</label>
-                  <input type="text" class="form-control" id="placeBirth" />
+                <div class="item-form">
+                  <label for="phone" class="label-form"
+                    >Phone <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    required
+                    class="input-form"
+                    minlength="10"
+                    maxlength="10"
+                  />
                 </div>
               </form>
             </div>
 
             <div class="form" id="form-5">
-              <h3>Account:</h3>
-              <form>
-                <div class="form-group">
-                  <label for="username">Username:</label>
-                  <input type="text" class="form-control" id="username" />
-                </div>
-                <div class="form-group">
-                  <label for="password">Password:</label>
-                  <input type="number" class="form-control" id="password" />
-                </div>
-              </form>
+              <h3>Overview</h3>
             </div>
           </div>
 
@@ -260,84 +283,6 @@
             <button class="btn" id="next">Next Step</button>
           </div>
         </div>
-        <!-- <form id="bookingForm">
-          <div id="step1">
-            <h3>Alegeți serviciile dorite:</h3>
-            <div class="service-checkbox">
-              <input type="checkbox" id="haircut" name="services" value="haircut">
-              <label for="haircut">Women's cut</label>
-            </div>
-            <div class="service-checkbox">
-              <input type="checkbox" id="shave" name="services" value="shave">
-              <label for="shave">Man's cut</label>
-            </div>
-            <div class="service-checkbox">
-              <input type="checkbox" id="shave" name="services" value="shave">
-              <label for="shave">Kid's cut</label>
-            </div>
-            <div class="service-checkbox">
-              <input type="checkbox" id="shave" name="services" value="shave">
-              <label for="shave">Wash</label>
-            </div>
-            <div class="service-checkbox">
-              <input type="checkbox" id="shave" name="services" value="shave">
-              <label for="shave">Hot towel shave</label>
-            </div>
-            <div class="service-checkbox">
-              <input type="checkbox" id="shave" name="services" value="shave">
-              <label for="shave">Beard trim</label>
-            </div>
-            <div class="service-checkbox">
-              <input type="checkbox" id="shave" name="services" value="shave">
-              <label for="shave">Coloring</label>
-            </div>
-            <div class="service-checkbox">
-              <input type="checkbox" id="shave" name="services" value="shave">
-              <label for="shave">Blowout</label>
-            </div>
-
-    
-            <button type="button" id="nextStep1">Următorul Pas</button>
-          </div>
-    
-          <div id="step2" style="display: none;">
-            <label for="stylist">Stilist:</label>
-            <select id="stylist" name="stylist" required>
-            </select>
-            <button type="button" id="nextStep2">Următorul Pas</button>
-          </div>
-    
-          <div id="step3" style="display: none;">
-            <label for="date">Data:</label>
-            <input type="date" id="date" name="date" required>
-    
-            <label for="time">Ora:</label>
-            <input type="time" id="time" name="time" required>
-            <button type="button" id="nextStep3">Următorul Pas</button>
-          </div>
-    
-          <div id="step4" style="display: none;">
-            <label for="name">Nume:</label>
-            <input type="text" id="name" name="name" required>
-    
-            <label for="phone">Număr de telefon:</label>
-            <input type="tel" id="phone" name="phone" required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-    
-            <button type="submit">Programează</button>
-          </div>
-        </form>
-    
-        <div id="confirmationMessage" style="display: none;">
-          <p>Programarea a fost înregistrată cu succes!</p>
-        </div>
-        </form>
-
-        <div id="confirmationMessage" style="display: none">
-          <p>Programarea a fost înregistrată cu succes!</p>
-        </div> -->
       </div>
     </section>
 

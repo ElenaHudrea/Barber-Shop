@@ -86,7 +86,7 @@ $(document).ready(function () {
     speed: 500,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 991,
         settings: {
           slidesToShow: 1,
           arrows: false,
