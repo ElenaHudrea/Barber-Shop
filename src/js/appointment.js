@@ -145,6 +145,11 @@ nextButton.addEventListener("click", () => {
       successMessage.className = "message-success";
       container.appendChild(successMessage);
 
+      let successImg = document.createElement("img");
+      successImg.src = "img/icons/appointmentSuccess.svg";
+      successImg.className = "img-success";
+      container.appendChild(successImg);
+
       const buttonContainer = document.getElementById("button-container");
       const informationsTitle = document.getElementById("informations");
       const steps = document.getElementById("steps");
@@ -179,6 +184,11 @@ nextButton.addEventListener("click", () => {
       time.textContent = "Time: " + timeForm;
       time.className = "time-form";
       divOverview.appendChild(time);
+
+      let payment = document.createElement("p");
+      payment.textContent = "Payment: Card/Cash at the reception";
+      payment.className = "pay-form";
+      divOverview.appendChild(payment);
 
       container.appendChild(divOverview);
     }

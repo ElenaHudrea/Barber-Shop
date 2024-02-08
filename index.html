@@ -45,7 +45,7 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="nav-fixed">
+      <div id="nav-fixed">
         <nav class="navigation-component">
           <div class="elements-nav">
             <a href="index.html" class="logo"
@@ -55,21 +55,33 @@
             <div class="menu">
               <ul class="list">
                 <li class="list-link">
-                  <a href="index.html" class="link-menu active">Home</a>
+                  <a href="index.html" class="link-menu active" id="linkNav"
+                    >Home</a
+                  >
                 </li>
                 <li class="list-link submenu-active">
-                  <a href="about-us.html" class="link-menu space">About Us</a>
+                  <a href="about-us.html" class="link-menu space" id="linkNav"
+                    >About Us</a
+                  >
                 </li>
                 <li class="list-link">
-                  <a href="appointment.html" class="link-menu">Appointment</a>
+                  <a href="appointment.html" class="link-menu" id="linkNav"
+                    >Appointment</a
+                  >
                 </li>
                 <li class="list-link">
-                  <a href="contact.html" class="link-menu">Contact</a>
+                  <a href="contact.html" class="link-menu" id="linkNav"
+                    >Contact</a
+                  >
                 </li>
               </ul>
-              <a href="#login" rel="modal:open" class="primary-button modal-btn"
-                >Login</a
-              >
+              <a
+                href="#login"
+                rel="modal:open"
+                id="nav-btn"
+                class="primary-button nav"
+                ><i class="fa fa-phone icon"></i
+              ></a>
             </div>
 
             <div class="hamburger">
@@ -82,15 +94,10 @@
       </div>
 
       <div class="container header hero-home">
-        <img
-          src="img/background/background-triangle.png"
-          class="triangle-bkg"
-          alt=""
-        />
         <div class="hero-component hero-home">
           <div class="hero-description">
             <h1 class="hero-title">
-              <span class="accent-yellow">Best</span> Barber
+              <span class="accent-yellow hero">Best</span> Barber
             </h1>
             <p class="hero-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua. Ut

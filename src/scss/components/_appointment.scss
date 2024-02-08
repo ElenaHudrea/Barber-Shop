@@ -266,16 +266,24 @@
     text-align: left;
   }
 
+  .icon {
+    margin-right: 0.5rem;
+  }
+
   .error {
     font-size: 1.4rem;
     color: $error-color;
   }
 
   .container-overview {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    border-radius: 3rem;
+    border: 0.3rem solid $primary-color;
+    padding: 2rem;
+    width: fit-content;
+    margin: 2rem auto 0 auto;
   }
 
   .title-overview {
@@ -292,6 +300,17 @@
   }
 
   .message-success {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 600;
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 3rem;
+    }
+  }
+
+  .img-success {
+    max-width: 30rem;
+    width: 100%;
+    margin-top: 2rem;
   }
 }

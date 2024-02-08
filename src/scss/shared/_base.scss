@@ -18,4 +18,16 @@ body {
 
 .accent-yellow {
   color: $primary-color;
+
+  &.hero {
+    @media screen and (max-width: $sm-screen-max) {
+      color: $color-white;
+    }
+  }
+
+  &.hero-mid {
+    @media screen and (max-width: $md-screen-max) {
+      color: $color-white;
+    }
+  }
 }

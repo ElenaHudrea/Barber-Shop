@@ -31,8 +31,8 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
-      <div class="nav-fixed">
+    <header class="header contact">
+      <div id="nav-fixed">
         <nav class="navigation-component">
           <div class="elements-nav">
             <a href="index.html" class="logo"
@@ -42,21 +42,45 @@
             <div class="menu">
               <ul class="list">
                 <li class="list-link">
-                  <a href="index.html" class="link-menu">Home</a>
+                  <a
+                    href="index.html"
+                    class="link-menu contact-page active"
+                    id="linkNav"
+                    >Home</a
+                  >
                 </li>
                 <li class="list-link submenu-active">
-                  <a href="about-us.html" class="link-menu space">About Us</a>
+                  <a
+                    href="about-us.html"
+                    class="link-menu contact-page space"
+                    id="linkNav"
+                    >About Us</a
+                  >
                 </li>
                 <li class="list-link">
-                  <a href="appointment.html" class="link-menu">Appointment</a>
+                  <a
+                    href="appointment.html"
+                    class="link-menu contact-page"
+                    id="linkNav"
+                    >Appointment</a
+                  >
                 </li>
                 <li class="list-link">
-                  <a href="contact.html" class="link-menu active">Contact</a>
+                  <a
+                    href="contact.html"
+                    class="link-menu contact-page"
+                    id="linkNav"
+                    >Contact</a
+                  >
                 </li>
               </ul>
-              <a href="#login" rel="modal:open" class="primary-button modal-btn"
-                >Login</a
-              >
+              <a
+                href="#login"
+                rel="modal:open"
+                id="nav-btn"
+                class="primary-button nav contact-page"
+                ><i class="fa fa-phone icon"></i
+              ></a>
             </div>
 
             <div class="hamburger">
@@ -69,11 +93,6 @@
       </div>
 
       <div class="container header hero-contact">
-        <img
-          src="img/background/background-triangle.png"
-          class="triangle-bkg"
-          alt=""
-        />
         <div class="contact-page-hero-description">
           <div class="hero-component contact-page-hero">
             <div class="hero-description">

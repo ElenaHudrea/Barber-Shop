@@ -24,48 +24,59 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="nav-fixed">
-          <nav class="navigation-component">
-            <div class="elements-nav">
-              <a href="index.html" class="logo"><img src="img/logo/logo-white.png" alt="" /></a>
+      <div id="nav-fixed">
+        <nav class="navigation-component">
+          <div class="elements-nav">
+            <a href="index.html" class="logo"
+              ><img src="img/logo/logo-white.png" alt=""
+            /></a>
 
-              <div class="menu">
-                <ul class="list">
-                  <li class="list-link">
-                    <a href="index.html" class="link-menu">Home</a>
-                  </li>
-                  <li class="list-link submenu-active">
-                    <a href="about-us.html" class="link-menu space active"
-                      >About Us</a
-                    >
-                  </li>
-                  <li class="list-link">
-                    <a href="appointment.html" class="link-menu">Appointment</a>
-                  </li>
-                  <li class="list-link">
-                    <a href="contact.html" class="link-menu">Contact</a>
-                  </li>
-                </ul>
-                <a href="#login" rel="modal:open" class="primary-button modal-btn"
-                  >Login</a
-                >
-              </div>
-
-              <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
+            <div class="menu">
+              <ul class="list">
+                <li class="list-link">
+                  <a href="index.html" class="link-menu active" id="linkNav"
+                    >Home</a
+                  >
+                </li>
+                <li class="list-link submenu-active">
+                  <a href="about-us.html" class="link-menu space" id="linkNav"
+                    >About Us</a
+                  >
+                </li>
+                <li class="list-link">
+                  <a href="appointment.html" class="link-menu" id="linkNav"
+                    >Appointment</a
+                  >
+                </li>
+                <li class="list-link">
+                  <a href="contact.html" class="link-menu" id="linkNav"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+              <a
+              href="#login"
+              rel="modal:open"
+              id="nav-btn"
+              class="primary-button nav"
+              ><i class="fa fa-phone icon"></i
+            ></a>
             </div>
-          </nav>
-        
+
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </nav>
       </div>
 
-      <div class="hero-about">
-        <div class="hero-component left-img about-hero">
+      <div class="hero-about container">
+        <div class="hero-component about-hero">
           <div class="hero-description">
             <h1 class="hero-title about-us-title">
-              Know Us <span class="accent-yellow">Better</span>
+              Know <span class="accent-yellow hero-mid">Us</span>
             </h1>
             <p class="hero-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua. Ut
@@ -77,8 +88,8 @@
               <a href="#team" class="primary-button transp">Find a barber</a>
             </div>
           </div>
-          <div class="hero-img about-img" id="moving-image">
-            <img src="img/icons/team.png" alt="" id="about-img"/>
+          <div class="hero-img about-img">
+            <img src="img/salon/barber-shop-salon-1.png" alt=""/>
           </div>
         </div>
       </div>

@@ -1,15 +1,15 @@
 .member-page {
   position: relative;
-  margin-bottom: 40rem;
+  margin-bottom: 20rem;
 
   @media screen and (max-width: $md-screen) {
-    margin-bottom: 25rem;
+    margin-bottom: 10rem;
   }
 }
 
 .member-info {
   position: absolute;
-  top: 50rem;
+  top: 80%;
   background-color: $gray;
   height: 20rem;
   display: flex;
@@ -19,11 +19,11 @@
   width: 100%;
 
   @media screen and (max-width: $lg-screen) {
-    top: 65rem;
+    top: 90%;
   }
 
   @media screen and (max-width: $md-screen) {
-    top: 70rem;
+    top: 80%;
   }
 
   @media screen and (max-width: $xs-screen-mid) {

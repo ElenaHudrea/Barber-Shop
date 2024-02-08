@@ -1,6 +1,7 @@
 .footer {
   background-color: $primary-color;
   padding: 6rem 2rem;
+  position: relative;
 
   .logo {
     width: 20rem;
@@ -65,5 +66,13 @@
     &:hover {
       font-weight: 500;
     }
+  }
+
+  .storyset {
+    font-size: 1rem;
+    text-decoration: none;
+    color: $color-black;
+    position: absolute;
+    bottom: 1rem;
   }
 }

@@ -20,4 +20,40 @@
       background-color: $color-primary-transp;
     }
   }
+
+  &.nav {
+    background-color: $color-black;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-black-transp;
+    }
+
+    &.contact-page {
+      background-color: $primary-color;
+      color: $color-black;
+
+      &:hover {
+        background-color: $primary-color-hover;
+      }
+    }
+
+    &.change-color {
+      background-color: $primary-color;
+      color: $color-black;
+
+      &:hover {
+        background-color: $primary-color-hover;
+      }
+    }
+  }
+
+  #nav-btn {
+    background-color: $color-black;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-black-transp;
+    }
+  }
 }

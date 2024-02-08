@@ -107,9 +107,10 @@
   .form-img-box {
     max-width: 65rem;
     max-height: 52rem;
+    width: 100%;
 
     @media screen and (max-width: 1600px) {
-      max-width: 38rem;
+      max-width: 42rem;
       max-height: 100%;
     }
 

@@ -9,6 +9,35 @@ function mobileMenu() {
   navMenu.classList.toggle("active");
 }
 
+// Fixed navigation
+const element = document.getElementById("nav-fixed");
+const linkNav = document.getElementsByClassName("link-menu");
+const btnNav = document.getElementById("nav-btn");
+window.addEventListener(
+  "scroll",
+  function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > 250) {
+      element.classList.add("active");
+      btnNav.classList.add("change-color");
+
+      for (let i = 0; i < linkNav.length; i++) {
+        let links = linkNav[i];
+        links.classList.add("change-color");
+      }
+    } else {
+      element.classList.remove("active");
+      btnNav.classList.remove("change-color");
+      for (let i = 0; i < linkNav.length; i++) {
+        let links = linkNav[i];
+        links.classList.remove("change-color");
+      }
+    }
+  },
+  false
+);
+
 // FAQ
 const items = document.querySelectorAll(".question");
 
@@ -58,7 +87,6 @@ for (const slide of slides) {
 }
 
 //Show section team
-// Blog
 $(function () {
   $(".show-more").text("Show more \u21E9");
   $(".show-more").click(function (e) {
@@ -82,8 +110,8 @@ $(document).ready(function () {
     arrows: true,
     autoplay: false,
     autoplay: true,
-    autoplaySpeed: 1000,
-    speed: 500,
+    autoplaySpeed: 1700,
+    speed: 700,
     responsive: [
       {
         breakpoint: 991,

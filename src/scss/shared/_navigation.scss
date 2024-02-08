@@ -1,10 +1,13 @@
-.nav-fixed {
+#nav-fixed {
   margin: 0 auto;
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  background-color: $color-black;
+
+  &.active {
+    position: fixed;
+    background-color: $color-black;
+    top: 0;
+    z-index: 1000;
+  }
 }
 
 .navigation-component {
@@ -43,7 +46,7 @@
       gap: 6rem;
     }
 
-    @media screen and (max-width: $lg-screen-max) {
+    @media screen and (max-width: 1250px) {
       gap: 4rem;
     }
   }
@@ -67,16 +70,61 @@
   }
 
   .link-menu {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
     font-size: 1.8rem;
-    color: $color-white;
+    font-weight: 500;
+    color: $color-black;
 
     &.active {
-      color: $primary-color;
+      color: $color-black;
+      font-weight: 700;
     }
 
-    &:hover {
-      color: $primary-color;
+    &.change-color {
+      color: $color-white;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        background-color: $color-white;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+
+    &.contact-page {
+      color: $color-white;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.2rem;
+      border-radius: 0.4rem;
+      background-color: $color-black;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
     }
   }
 
@@ -102,7 +150,7 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1150px) {
     .menu {
       position: fixed;
       left: -100%;
