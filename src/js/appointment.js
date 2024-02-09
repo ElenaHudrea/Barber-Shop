@@ -15,6 +15,8 @@ let personalDate = true;
 let membersServiceSelected = [];
 let freeDate = false;
 
+let containerPersonalDate = document.querySelector(".overview");
+
 nextButton.addEventListener("click", () => {
   console.log(currentStep);
   if (currentStep == 1 && isServiceIsSelected()) {
@@ -93,7 +95,11 @@ nextButton.addEventListener("click", () => {
     stylistBoolean = false;
   }
 
-  if (currentStep == 3 && isDateAndTimeSelected()) {
+  if (
+    currentStep == 3 &&
+    isDateAndTimeSelected() &&
+    $("#form-appointment").valid()
+  ) {
     saveAppointment();
     if (freeDate) {
       currentStep++;
@@ -115,8 +121,11 @@ nextButton.addEventListener("click", () => {
     dateAndTimeBoolean = false;
   }
 
-  let container = document.querySelector(".overview");
-  if (currentStep == 4 && isPersonalDate()) {
+  if (
+    currentStep == 4 &&
+    isPersonalDate() &&
+    $("#form-personal-info").valid()
+  ) {
     currentStep++;
     if (currentStep > steps.length) {
       currentStep = steps.length;
@@ -138,17 +147,17 @@ nextButton.addEventListener("click", () => {
       currentStep = steps.length;
     }
 
-    if (container.hasChildNodes()) {
-      container.innerHTML = "";
+    if (containerPersonalDate.hasChildNodes()) {
+      containerPersonalDate.innerHTML = "";
       let successMessage = document.createElement("p");
       successMessage.textContent = "Appointment successfully saved!";
       successMessage.className = "message-success";
-      container.appendChild(successMessage);
+      containerPersonalDate.appendChild(successMessage);
 
       let successImg = document.createElement("img");
       successImg.src = "img/icons/appointmentSuccess.svg";
       successImg.className = "img-success";
-      container.appendChild(successImg);
+      containerPersonalDate.appendChild(successImg);
 
       const buttonContainer = document.getElementById("button-container");
       const informationsTitle = document.getElementById("informations");
@@ -186,11 +195,11 @@ nextButton.addEventListener("click", () => {
       divOverview.appendChild(time);
 
       let payment = document.createElement("p");
-      payment.textContent = "Payment: Card/Cash at the reception";
+      payment.textContent = "Payment: Card/Cash at the reception!";
       payment.className = "pay-form";
       divOverview.appendChild(payment);
 
-      container.appendChild(divOverview);
+      containerPersonalDate.appendChild(divOverview);
     }
     updateProgress();
   }
@@ -202,8 +211,6 @@ prevButton.addEventListener("click", () => {
     currentStep = 1;
   }
 
-  updateProgress();
-
   if (currentStep == 1) {
     membersServiceSelected = [];
     console.log(membersServiceSelected);
@@ -213,19 +220,35 @@ prevButton.addEventListener("click", () => {
     while (container.firstChild) {
       container.removeChild(container.firstChild);
     }
+
+    cardSelectedStylist = null;
   }
 
   if (currentStep == 2) {
     stylistBoolean = true;
+
+    document.getElementById("date").value = "";
+    document.getElementById("time").value = "";
   }
 
   if (currentStep == 3) {
     dateAndTimeBoolean = true;
+
+    document.getElementById("fullName").value = "";
+    document.getElementById("phone").value = "";
   }
 
   if (currentStep == 4) {
     personalDate = true;
+
+    if (containerPersonalDate.hasChildNodes()) {
+      containerPersonalDate.innerHTML = "";
+    }
   }
+
+  console.log(stylistBoolean);
+
+  updateProgress();
 });
 
 function updateProgress() {
@@ -299,6 +322,7 @@ function isStylistIsSelected() {
 function isDateAndTimeSelected() {
   let date = document.getElementById("date").value;
   let time = document.getElementById("time").value;
+
   return date !== "" && time !== "";
 }
 

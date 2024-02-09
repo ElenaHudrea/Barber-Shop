@@ -54,6 +54,12 @@
     max-width: 60rem;
     width: 100%;
     height: auto;
+    margin: 0 auto;
+
+    @media screen and (max-width: $sm-screen-max) {
+      max-width: 100%;
+      width: auto;
+    }
   }
 
   .progress-container {
@@ -63,8 +69,12 @@
     position: relative;
     justify-content: space-between;
 
-    @media screen and (max-width: $xs-screen-mid) {
+    @media screen and (max-width: $xs-screen-max) {
       width: 80%;
+    }
+
+    @media screen and (max-width: $xs-screen-mid) {
+      width: 100%;
     }
   }
 
@@ -145,7 +155,7 @@
   }
 
   .btn:disabled {
-    background-color: #d3d3d3; /* Lighter disabled button color */
+    background-color: #d3d3d3;
   }
 
   .form {
@@ -190,6 +200,10 @@
     align-items: center;
     justify-content: center;
     margin-top: 4rem;
+
+    @media screen and (max-width: $sm-screen) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .card {

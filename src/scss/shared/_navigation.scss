@@ -173,6 +173,15 @@
 
     .primary-button {
       margin: 0 auto;
+
+      &.nav {
+        background-color: $primary-color;
+        color: $color-black;
+
+        &:hover {
+          background-color: $primary-color-hover;
+        }
+      }
     }
 
     .list {
@@ -189,17 +198,33 @@
       padding: 2rem 0 1rem 0;
       border-radius: 0.5rem;
       cursor: pointer;
-
-      &.active {
-        .link-menu {
-          color: $color-black;
-        }
-      }
     }
 
     .link-menu {
       color: $color-white;
       font-weight: 500;
+
+      &.active {
+        color: $color-white;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        background-color: $color-white;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
     }
 
     .hamburger {

@@ -18,7 +18,7 @@ window.addEventListener(
   function () {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollTop > 250) {
+    if (scrollTop > 520) {
       element.classList.add("active");
       btnNav.classList.add("change-color");
 

@@ -203,6 +203,13 @@ h6 {
   .navigation-component .primary-button {
     margin: 0 auto;
   }
+  .navigation-component .primary-button.nav {
+    background-color: #f4ce14;
+    color: #272829;
+  }
+  .navigation-component .primary-button.nav:hover {
+    background-color: #e1c224;
+  }
   .navigation-component .list {
     padding-top: 8rem;
     flex-direction: column;
@@ -217,12 +224,28 @@ h6 {
     border-radius: 0.5rem;
     cursor: pointer;
   }
-  .navigation-component .list-link.active .link-menu {
-    color: #272829;
-  }
   .navigation-component .link-menu {
     color: #f5f7f8;
     font-weight: 500;
+  }
+  .navigation-component .link-menu.active {
+    color: #f5f7f8;
+  }
+  .navigation-component .link-menu::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #f5f7f8;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  .navigation-component .link-menu:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
   }
   .navigation-component .hamburger {
     display: block;
@@ -301,14 +324,30 @@ h6 {
 .footer .item-list {
   text-decoration: none;
   color: #272829;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media screen and (max-width: 1024px) {
   .footer .item-list {
     font-size: 1.6rem;
   }
 }
-.footer .item-list:hover {
-  font-weight: 500;
+.footer .item-list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #272829;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.footer .item-list:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 .footer .storyset {
   font-size: 1rem;
@@ -2168,6 +2207,13 @@ body {
   max-width: 60rem;
   width: 100%;
   height: auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+  .appointment-form .appointment-form-container {
+    max-width: 100%;
+    width: auto;
+  }
 }
 .appointment-form .progress-container {
   margin: 0 auto;
@@ -2176,9 +2222,14 @@ body {
   position: relative;
   justify-content: space-between;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 767px) {
   .appointment-form .progress-container {
     width: 80%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .appointment-form .progress-container {
+    width: 100%;
   }
 }
 .appointment-form .progress-bar-back,
@@ -2248,7 +2299,7 @@ body {
   transform: scale(0.97);
 }
 .appointment-form .btn:disabled {
-  background-color: #d3d3d3; /* Lighter disabled button color */
+  background-color: #d3d3d3;
 }
 .appointment-form .form {
   margin: 2rem 0;
@@ -2288,6 +2339,11 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .appointment-form .cards-container {
+    grid-template-columns: 1fr;
+  }
 }
 .appointment-form .card {
   flex: 1;
