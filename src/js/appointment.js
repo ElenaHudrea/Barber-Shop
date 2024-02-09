@@ -523,7 +523,6 @@ function savePersonalDate() {
 }
 
 $(function () {
-  // check if is only letters in field
   $.validator.addMethod(
     "lettersOnly",
     function (value, element) {
@@ -532,7 +531,6 @@ $(function () {
     "Please enter letters only."
   );
 
-  // check if is only digits in field
   $.validator.addMethod(
     "digitsOnly",
     function (value, element) {
@@ -555,8 +553,12 @@ $(function () {
       },
     },
     messages: {
+      fullName: {
+        required: "This field is required.",
+      },
       phone: {
         minlength: "Phone number must be exactly 10 digits.",
+        required: "This field is required.",
       },
     },
     submitHandler: function (form) {},

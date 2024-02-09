@@ -2344,6 +2344,11 @@ body {
 .appointment-form input:focus {
   border: 0.2rem solid #f4ce14;
 }
+.appointment-form input.error {
+  border: 0.3rem solid #ff0101;
+  font-weight: 500;
+  color: #ff0101;
+}
 .appointment-form .cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2448,6 +2453,21 @@ body {
 }
 .appointment-form .icon {
   margin-right: 0.5rem;
+}
+.appointment-form #form-appointment .error {
+  font-size: 1.4rem;
+  color: #ff0101;
+  margin-left: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .appointment-form #form-appointment .error {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .appointment-form #form-appointment .error {
+    margin-left: 0;
+  }
 }
 .appointment-form .error {
   font-size: 1.4rem;

@@ -191,6 +191,12 @@
     &:focus {
       border: 0.2rem solid $primary-color;
     }
+
+    &.error {
+      border: 0.3rem solid $error-color;
+      font-weight: 500;
+      color: $error-color;
+    }
   }
 
   .cards-container {
@@ -308,6 +314,22 @@
 
   .icon {
     margin-right: 0.5rem;
+  }
+
+  #form-appointment {
+    .error {
+      font-size: 1.4rem;
+      color: $error-color;
+      margin-left: 2rem;
+
+      @media screen and (max-width: $sm-screen) {
+        margin-left: 1rem;
+      }
+
+      @media screen and (max-width: $xs-screen-mid) {
+        margin-left: 0;
+      }
+    }
   }
 
   .error {
