@@ -616,6 +616,11 @@ header.contact {
   color: #272829;
   font-size: 1.6rem;
 }
+@media screen and (max-width: 768px) {
+  .form-component .rating-box label {
+    font-size: 1.4rem;
+  }
+}
 .form-component .rating-box .stars {
   display: flex;
   align-items: flex-start;

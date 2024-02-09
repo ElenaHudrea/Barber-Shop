@@ -133,6 +133,10 @@
     label {
       color: $color-black;
       font-size: 1.6rem;
+
+      @media screen and (max-width: $sm-screen) {
+        font-size: 1.4rem;
+      }
     }
 
     .stars {
