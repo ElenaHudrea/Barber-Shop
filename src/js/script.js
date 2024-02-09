@@ -94,7 +94,7 @@ $(function () {
       $(".show-section").hide();
       $(".show-more").text("Show more \u21E9");
     } else {
-      $(".show-section").show().css("margin-top", "4rem");
+      $(".show-section").show().css("margin-top", "2rem");
       $(".show-more").text("Show less \u21E7");
     }
   });
