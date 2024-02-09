@@ -2484,6 +2484,10 @@ body {
   width: 100%;
   margin-top: 2rem;
 }
+.appointment-form .message {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
 
 .circle-bar .radial-progress {
   display: none;
