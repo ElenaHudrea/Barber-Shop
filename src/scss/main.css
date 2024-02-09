@@ -2198,9 +2198,9 @@ body {
   }
 }
 .appointment-form h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
 }
 .appointment-form .appointment-form-container {
   position: relative;
@@ -2307,7 +2307,7 @@ body {
   background-color: #d3d3d3;
 }
 .appointment-form .form {
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 .appointment-form form {
   margin: 2rem 0 3rem 0;
@@ -2343,7 +2343,6 @@ body {
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
 }
 @media screen and (max-width: 768px) {
   .appointment-form .cards-container {
@@ -2420,8 +2419,15 @@ body {
   gap: 1rem;
   text-align: left;
 }
-.appointment-form .input-form {
-  width: 100%;
+.appointment-form .date-time {
+  margin-left: 2rem;
+}
+.appointment-form input[type=date],
+.appointment-form input[type=time] {
+  padding: 0 1.5rem;
+  width: 90%;
+  height: 4.5rem;
+  align-self: center;
 }
 .appointment-form .icon {
   margin-right: 0.5rem;
