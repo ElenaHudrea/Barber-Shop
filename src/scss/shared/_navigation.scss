@@ -154,12 +154,12 @@
     .menu {
       position: fixed;
       left: -100%;
-      top: 4rem;
+      top: 0;
       padding-bottom: 5rem;
       flex-direction: column;
       background-color: $color-black;
       width: 100%;
-      border-radius: 10px;
+      border-radius: 0 0 1rem 1rem;
       text-align: center;
       transition: 0.3s;
       gap: 4rem;
