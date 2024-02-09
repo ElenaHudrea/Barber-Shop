@@ -164,7 +164,7 @@
       transition: 0.3s;
       gap: 4rem;
       z-index: 3;
-      box-shadow: 0 0.4rem 0.6rem -0.2rem $primary-color;
+      box-shadow: 0 0.4rem 0.2rem -0.2rem $primary-color;
 
       &.active {
         left: 0;

@@ -261,10 +261,17 @@
   }
 
   .img-stylist {
-    width: 20rem;
-    height: 25rem;
+    max-width: 20rem;
+    width: 100%;
+    max-height: 25rem;
+    height: 100%;
     border-radius: 100rem;
     margin-bottom: 2rem;
+
+    @media screen and (max-width: $xs-screen-mid) {
+      max-width: 15rem;
+      max-height: 20rem;
+    }
   }
 
   .price-service {
@@ -278,6 +285,10 @@
     margin-bottom: 3rem;
     gap: 1rem;
     text-align: left;
+  }
+
+  .input-form {
+    width: 100%;
   }
 
   .icon {
