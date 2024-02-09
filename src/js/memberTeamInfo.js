@@ -60,8 +60,8 @@ function showMemberInfo() {
   var memberName = urlParams.get("name");
   var memberImgName = urlParams.get("imgName");
 
-  document.getElementById("memberName").innerText = memberName || "";
-  document.getElementById("memberImage").src = memberImgName || "";
+  document.querySelector("#memberName").innerText = memberName || "";
+  document.querySelector("#memberImage").src = memberImgName || "";
 
   var selectedMember = salonMembers.find(
     (member) => member.name === memberName

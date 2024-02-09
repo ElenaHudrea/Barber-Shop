@@ -1,3 +1,51 @@
+var salonMembers = [
+  {
+    name: "Emily",
+    imgName: "img/member-team/member1.jpg",
+    info: ["4+", "10", "40+"],
+    services: ["Women's cut", "Coloring", "Blowout", "Kid's cut"],
+    prices: ["$ 30.0", "$ 50.0", "$ 20.0", "$ 10.0"],
+  },
+  {
+    name: "John",
+    imgName: "img/member-team/member2.jpg",
+    info: ["3+", "9.55", "23+"],
+    services: ["Men's cut", "Hot towel shave", "Beard trim", "Kid's cut"],
+    prices: ["$ 25.0", "$ 25.5", "$ 10.0", "$ 15.0"],
+  },
+  {
+    name: "Anne",
+    imgName: "img/member-team/member3.jpg",
+    info: ["2+", "8.55", "11+"],
+    services: ["Women's cut", "Wash", "Beard trim", "Kid's cut"],
+    prices: ["$ 25.0", "$ 15.5", "$ 15.0", "$ 10.0"],
+  },
+  {
+    name: "Nicolas",
+    imgName: "img/member-team/member4.jpg",
+    info: ["6+", "10", "79+"],
+    services: ["Men's cut", "Hot towel shave", "Beard trim", "Kid's cut"],
+    prices: ["$ 40.0", "$ 35.5", "$ 15.0", "$ 15.0"],
+  },
+  {
+    name: "Sofia",
+    imgName: "img/member-team/member5.jpg",
+    info: ["5+", "9.25", "21+"],
+    services: ["Men's cut", "Coloring", "Beard trim", "Women's cut"],
+    prices: ["$ 30.0", "$ 30.5", "$ 10.0", "$ 35.0"],
+  },
+  {
+    name: "Raul",
+    imgName: "img/member-team/member6.jpg",
+    info: ["1+", "7.20", "12+"],
+    services: ["Men's cut", "Wash", "Beard trim", "Kid's cut"],
+    prices: ["$ 15.0", "$ 10.5", "$ 10.0", "$ 15.0"],
+  },
+];
+
+var salonMembersJSON = JSON.stringify(salonMembers);
+localStorage.setItem("salonMembersInfo", salonMembersJSON);
+
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
 const submitButton = document.getElementById("next");
