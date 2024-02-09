@@ -288,6 +288,14 @@
 
   .date-time {
     margin-left: 2rem;
+
+    @media screen and (max-width: $sm-screen) {
+      margin-left: 1rem;
+    }
+
+    @media screen and (max-width: $xs-screen-mid) {
+      margin-left: 0;
+    }
   }
 
   input[type="date"],
