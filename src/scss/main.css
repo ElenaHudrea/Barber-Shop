@@ -304,7 +304,6 @@ h6 {
   .footer .footer-links {
     flex-direction: column;
     gap: 6rem;
-    padding-left: 3rem;
   }
 }
 .footer .footer-list {
