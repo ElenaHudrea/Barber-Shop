@@ -1648,6 +1648,12 @@ body {
 @media screen and (max-width: 992px) {
   .price-container {
     margin-bottom: 10rem;
+    background-image: url("../img/sections-img/barber-shop-sign-mid.jpg");
+  }
+}
+@media screen and (max-width: 768px) {
+  .price-container {
+    background-image: url("../img/sections-img/barber-shop-sign-small.jpg");
   }
 }
 .price-container .price-content {

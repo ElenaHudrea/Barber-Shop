@@ -163,6 +163,8 @@ $(function () {
   $.validator.addMethod(
     "lettersOnly",
     function (value, element) {
+      value = value.trim();
+      $(element).val(value);
       return this.optional(element) || /^[a-zA-Z\s]+$/.test(value);
     },
     "Please enter letters only."
@@ -247,6 +249,8 @@ $(function () {
   $.validator.addMethod(
     "lettersOnly",
     function (value, element) {
+      value = value.trim();
+      $(element).val(value);
       return this.optional(element) || /^[a-zA-Z\s]+$/.test(value);
     },
     "Please enter letters only."

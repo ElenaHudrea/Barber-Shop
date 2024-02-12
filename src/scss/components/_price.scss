@@ -8,6 +8,11 @@
 
   @media screen and (max-width: $md-screen) {
     margin-bottom: 10rem;
+    background-image: url("../img/sections-img/barber-shop-sign-mid.jpg");
+  }
+
+  @media screen and (max-width: $sm-screen) {
+    background-image: url("../img/sections-img/barber-shop-sign-small.jpg");
   }
 
   .price-content {
