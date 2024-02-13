@@ -48,7 +48,7 @@ function toggleAccordion() {
 items.forEach((item) => item.addEventListener("click", toggleAccordion));
 
 //  Testimonials
-const swiper = new Swiper(".swiperCarousel", {
+const swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 10,
@@ -97,31 +97,6 @@ $(function () {
       $(".show-section").show().css("margin-top", "2rem");
       $(".show-more").text("Show less \u21E7");
     }
-  });
-});
-
-// Slider hero
-$(document).ready(function () {
-  $(".slider-inner").slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    centerMode: true,
-    arrows: true,
-    autoplay: false,
-    autoplay: true,
-    autoplaySpeed: 1700,
-    speed: 700,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          dots: true,
-        },
-      },
-    ],
   });
 });
 
